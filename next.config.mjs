@@ -1,7 +1,3 @@
-import withMDX from '@next/mdx';
-import remarkSlug from 'remark-slug';
-import remarkAutolinkHeadings from 'remark-autolink-headings';
-
 const config = {
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
@@ -53,3 +49,4 @@ const config = {
 };
 
 export default config;
+``

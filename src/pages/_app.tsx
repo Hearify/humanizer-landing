@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Script from 'next/script';
-import { appWithTranslation } from 'next-i18next';
 import { Nunito, Caveat } from 'next/font/google';
 
 import PageLayout from '@/templates/PageLayout/PageLayout';
@@ -44,49 +42,16 @@ const App = ({ Component, pageProps }: AppProps) => {
           name="viewport"
           content="minimum-scale=1, maximum-scale=5, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
         />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Hearify" />
-        <meta key="og:image" property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL}/main-image.png`} />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="alternate" href={canonicalEnUrl} hrefLang="en" />
-        <link rel="alternate" href={canonicalUkUrl} hrefLang="uk" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:site_name" content="Abify"/>
+        <meta key="og:image" property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL}/main-image.png`}/>
+        <link rel="icon" href="/favicon.ico"/>
+        <link rel="canonical" href={canonicalUrl}/>
 
-        {/* HomePage has its own canonical url with additional locales */}
-        {cleanPath !== '/' && <link rel="canonical" href={canonicalUrl} />}
-
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow"/>
       </Head>
 
       <div className={`${nunito.variable} ${caveat.variable}`}>
-        <Script
-          id="google-tag-manager"
-          dangerouslySetInnerHTML={{
-            __html: `
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-PV5D2MP9'); `,
-          }}
-        />
-
-        <Script
-          id="hotjar-tracking-code"
-          strategy="afterInteractive"
-          defer
-          dangerouslySetInnerHTML={{
-            __html: `
-          (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:4934986,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-          })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv='); `,
-          }}
-        />
-
         <PageLayout>
           <Component {...pageProps} />
         </PageLayout>
@@ -95,4 +60,4 @@ const App = ({ Component, pageProps }: AppProps) => {
   );
 };
 
-export default appWithTranslation(App);
+export default App;
