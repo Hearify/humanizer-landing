@@ -1,6 +1,152 @@
 @use 'src/styles/helpers' as *;
 
 .wrapper {
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  background-color: #FEFDFF;
+  position: relative;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+
+  @include xl {
+    max-width: 1040px;
+  }
+  @include lg {
+    max-width: 900px;
+  }
+  @include md {
+    padding: 16px 32px;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.phone_navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;}
+
+.links {
+  display: flex;
+  gap: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21;
+  color: var(--general-black, #15343A);
+
+  @include md {
+    font-size: 16px;
+  }
+}
+
+.burger_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.humanize_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    background-color: var(--brand-purple-400, #6444F4);
+    border-radius: 8px;
+    color: #FEFDFF;
+  }
+
+.burger_btn {
+  @include lg {
+    display: block;
+    z-index: $z-index-hamburger;
+    cursor: pointer;
+  }
+
+  &.hamburgerActive {
+    .bar:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+}
+
+
+.bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 5px auto;
+  background-color: var(--neural-600, #475569);
+  border-radius: 10px;
+  transition: $default-transition;
+}
+
+.drawer {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  height: auto;
+  width: 100%;
+  background-color: #f6f6f6;
+  z-index: $z-index-header;
+  transform: translateY(-70px);
+  transition: $default-transition;
+
+  &.drawerActive {
+    transform: translateY(0);
+    transition: $default-transition;
+  }
+}
+
+
+.drawerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 12px 32px 32px 32px;
+  height: 100%;
+}
+
+.overlay {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

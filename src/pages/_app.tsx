@@ -42,13 +42,13 @@ const App = ({ Component, pageProps }: AppProps) => {
           name="viewport"
           content="minimum-scale=1, maximum-scale=5, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
         />
-        <meta property="og:type" content="website"/>
-        <meta property="og:site_name" content="Abify"/>
-        <meta key="og:image" property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL}/main-image.png`}/>
-        <link rel="icon" href="/favicon.ico"/>
-        <link rel="canonical" href={canonicalUrl}/>
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Abify" />
+        <meta key="og:image" property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL}/main-image.png`} />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href={canonicalUrl} />
 
-        <meta name="robots" content="index, follow"/>
+        <meta name="robots" content="index, follow" />
       </Head>
 
       <div className={`${nunito.variable} ${caveat.variable}`}>
