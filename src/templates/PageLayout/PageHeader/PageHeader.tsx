@@ -12,7 +12,7 @@ const PageHeader: React.FC = () => {
   const { isDeviceLarge, isServer } = useDeviceDetect('md');
   const { isDeviceSmall } = useDeviceDetect('sm');
 
-  const toggleMenu = () => {
+  const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -40,16 +40,16 @@ const PageHeader: React.FC = () => {
             </nav>
           ) : (
             <>
-              <div className={styles.burger_wrapper}>
+              <div className={styles['burger-wrapper']}>
                 {!isDeviceSmall && (
-                  <button type="button" className={styles.humanize_btn}>
+                  <button type="button" className={styles['humanize-btn']}>
                     <SparklesIcon width={24} height={24} />
                     Humanize
                   </button>
                 )}
                 <button
                   type="button"
-                  className={cn(styles.burger_btn, isMenuOpen && styles.hamburgerActive)}
+                  className={cn(styles['burger-btn'], isMenuOpen && styles.hamburgerActive)}
                   aria-label="Burger menu button"
                   onClick={toggleMenu}
                 >
@@ -63,7 +63,7 @@ const PageHeader: React.FC = () => {
                   <div className={styles.drawerContent}>
                     <NavLinks />
                     {isDeviceSmall && (
-                      <button type="button" className={styles.humanize_btn}>
+                      <button type="button" className={styles['humanize-btn']}>
                         <SparklesIcon width={24} height={24} />
                         Humanize
                       </button>
@@ -76,7 +76,7 @@ const PageHeader: React.FC = () => {
           )}
         </div>
         {isDeviceLarge && (
-          <button type="button" className={styles.humanize_btn}>
+          <button type="button" className={styles['humanize-btn']}>
             <SparklesIcon width={24} height={24} />
             Humanize
           </button>
