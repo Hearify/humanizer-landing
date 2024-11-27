@@ -75,18 +75,10 @@
 }
 
 .description {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 588px;
+  width: 700px;
 
   p:nth-child(1){
     @include text-subtitle-3;
-    font-weight: 400;
-  }
-
-  p {
-    @include text-subtitle-4;
     font-weight: 400;
   }
 

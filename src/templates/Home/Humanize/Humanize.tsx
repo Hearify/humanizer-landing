@@ -24,14 +24,15 @@ const Humanize: React.FC = () => {
         <div className={styles.content}>
           <div className={styles.title}>
             <h1 className={styles.title}>AI Humanizer by Abify</h1>
-            <h2 className={styles.title}>AI Text Humanizer for Natural, Undetectable Writing</h2>
+            <h2 className={styles.title}>
+              AI to Human Text Converter: Transform AI into Undetectable & Unique Writing
+            </h2>
           </div>
           <div className={styles.description}>
-            <p>Change robotic sentences into flowing, engaging text that bypasses AI detectors effortlessly.</p>
             <p>
-              Boost your content’s appeal and ensure it connects with your audience on a human level — all while saving
-              time and enhancing your workflow. Abify is your go-to tool to make your writing undetectable and truly
-              effective.
+              Change AI generated content into natural, readable, and engaging text that bypasses AI detectors
+              effortlessly. Boost your content’s appeal and ensure it connects with your audience on a human level — all
+              while saving time and improving your workflow.
             </p>
           </div>
           <button className={styles['humanize-btn']} type="button">
