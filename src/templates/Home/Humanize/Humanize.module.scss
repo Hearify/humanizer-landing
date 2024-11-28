@@ -62,7 +62,7 @@
   align-items: flex-start;
   gap: 16px;
   h1 {
-    @include text-heading-2;
+    @include text-heading-5;
     font-weight: 600;
 
     @include sm {
@@ -70,7 +70,7 @@
     }
   }
   h2 {
-    @include text-heading-5;
+    @include text-heading-2;
   }
 }
 
