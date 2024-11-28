@@ -1,0 +1,31 @@
+@use "src/styles/helpers" as *;
+
+.AppButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 16px;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 150%;
+  border: 2px solid var(--brand-purpe-400, #6444F4);
+  border-radius: 8px;
+  color: var(--general-black, #15343A);
+
+  &:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: $shadow-card;
+  }
+  &:disabled {
+    border: none;
+    background-color: var(--neural-100, #F1F5F9);
+    color: var(--neural-400, #94A3B8);
+    cursor: not-allowed;
+    &:hover {
+      box-shadow: none;
+      transition: none;
+    }
+  }
+}

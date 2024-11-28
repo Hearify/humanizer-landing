@@ -1,12 +1,12 @@
 import Head from 'next/head';
 
-import Home from "@/templates/Home/Home";
+import Home from '@/templates/Home/Home';
 
 import type { NextPage } from 'next';
 
 const HomePage: NextPage = () => {
-  const pageTitle = `AI Humanizer by Abify`;
-  const pageDescription = `Convert text to speech with AI Humanizer by Abify`;
+  const pageTitle = `AI Humanizer for Authentic Content - Write Human AI with Abify`;
+  const pageDescription = ` Humanize AI content with Abify, the humanizer that turns robotic results into natural, human writing. Bypass AI detectors, create plagiarism-free content, and write human AI text for marketing, blogging, or business — all in seconds.`;
 
   return (
     <>
@@ -17,10 +17,9 @@ const HomePage: NextPage = () => {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <Home/>
+      <Home />
     </>
   );
 };
 
 export default HomePage;
-
