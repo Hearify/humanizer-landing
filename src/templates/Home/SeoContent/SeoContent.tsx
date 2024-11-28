@@ -7,7 +7,7 @@ const SeoContent: React.FC = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <section className={styles.body}>
-          <h2 className={styles.title}>Why to Choose Abify?</h2>
+          <h2 className={styles.title}>Why to Choose Humanizer by Abify?</h2>
           <p className={styles.label}>Humanize AI Content</p>
           <p className={styles.text}>
             Transform AI-generated text into natural, authentic content that sounds like a human wrote. Abify is the
@@ -128,7 +128,7 @@ const SeoContent: React.FC = () => {
           <p className={styles.quote}>“Discover all the features of Abify today!”</p>
         </section>
         <section className={styles.body}>
-          <h1 className={styles.title}>Humanize Beyond Detection: Abify Provides Original and Authentic Writing</h1>
+          <h2 className={styles.title}>Humanize Beyond Detection: Abify Provides Original and Authentic Writing</h2>
           <p className={styles.text}>
             Abify doesnt just bypass AI detectors - its designed to make your content unique and original. Our advanced
             AI text humanizer doesnt just paraphrase; it rewrites and transforms text to create authentic,
