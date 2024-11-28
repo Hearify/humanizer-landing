@@ -23,10 +23,10 @@ const Humanize: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.title}>
-            <h1 className={styles.title}>AI Humanizer by Abify</h1>
-            <h2 className={styles.title}>
+            <h2 className={styles.title}>AI Humanizer by Abify</h2>
+            <h1 className={styles.title}>
               AI to Human Text Converter: Transform AI into Undetectable & Unique Writing
-            </h2>
+            </h1>
           </div>
           <div className={styles.description}>
             <p>
