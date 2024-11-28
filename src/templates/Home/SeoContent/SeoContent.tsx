@@ -130,8 +130,8 @@ const SeoContent: React.FC = () => {
         <section className={styles.body}>
           <h1 className={styles.title}>Humanize Beyond Detection: Abify Provides Original and Authentic Writing</h1>
           <p className={styles.text}>
-            Abify doesn't just bypass AI detectors - it's designed to make your content unique and original. Our
-            advanced AI text humanizer doesn't just paraphrase; it rewrites and transforms text to create authentic,
+            Abify doesnt just bypass AI detectors - its designed to make your content unique and original. Our advanced
+            AI text humanizer doesnt just paraphrase; it rewrites and transforms text to create authentic,
             plagiarism-free content that perfectly matches your needs. Whether creating academic materials, marketing
             texts, or publishing professional content, Abify ensures that your work effortlessly passes all the
             significant plagiarism checks.

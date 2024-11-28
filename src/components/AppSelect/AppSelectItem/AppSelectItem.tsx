@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import cn from 'classnames';
 
 import styles from './AppSelectItem.module.scss';
