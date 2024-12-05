@@ -64,7 +64,7 @@
     gap: 20px;
   }
   @include md {
-    gap: 80px;
+    gap: 60px;
   }
   @include sm {
     align-items: flex-start;
@@ -80,6 +80,10 @@
 
   a {
     text-decoration: underline;
+  }
+
+  @include lg {
+    width: 200px;
   }
 
   @include md {
