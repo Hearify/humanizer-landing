@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import cn from 'classnames';
 import { SparklesIcon } from '@heroicons/react/24/solid';
+import Link from 'next/link';
 
 import styles from './PageHeader.module.scss';
 import AbifyLogo from '@/assets/images/logo.svg';
@@ -14,6 +15,10 @@ const PageHeader: React.FC = () => {
 
   const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = (): void => {
+    setIsMenuOpen(false);
   };
 
   useEffect(() => {
@@ -32,11 +37,13 @@ const PageHeader: React.FC = () => {
       <div className={styles.container}>
         <div className={isDeviceLarge ? styles.navigation : styles.phone_navigation}>
           <div className={styles.logo_container}>
-            <AbifyLogo width={96} height={32} alt="Logo" />
+            <Link rel="stylesheet" href="/">
+              <AbifyLogo width={96} height={32} alt="Logo" />
+            </Link>
           </div>
           {!isServer && isDeviceLarge ? (
             <nav className={styles.links}>
-              <NavLinks />
+              <NavLinks closeMenu={closeMenu} />
             </nav>
           ) : (
             <>
@@ -61,7 +68,7 @@ const PageHeader: React.FC = () => {
               {isMenuOpen && (
                 <div className={cn(styles.drawer, styles.drawerActive)}>
                   <div className={styles.drawerContent}>
-                    <NavLinks />
+                    <NavLinks closeMenu={closeMenu} />
                     {isDeviceSmall && (
                       <button type="button" className={styles['humanize-btn']}>
                         <SparklesIcon width={24} height={24} />

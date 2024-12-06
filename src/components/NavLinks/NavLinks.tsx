@@ -1,21 +1,26 @@
 import Link from 'next/link';
 import React from 'react';
 
-const NavLinks: React.FC = () => {
+type NavLinkProps = {
+  closeMenu: () => void;
+};
+
+const buttonText = [
+  { href: '#why-choose-us', text: 'Why Choose Us' },
+  { href: '#how-abify-works', text: 'How Abify Works' },
+  { href: '#features', text: 'Features' },
+  { href: '#faq', text: 'FAQ' },
+  { href: '/contact-us', text: 'Contact Us' },
+];
+
+const NavLinks: React.FC<NavLinkProps> = ({ closeMenu }) => {
   return (
     <>
-      <Link href="#why-choose-us">
-        <p>Why Choose Us</p>
-      </Link>
-      <Link href="#how-abify-works">
-        <p>How Abify Works</p>
-      </Link>
-      <Link href="#features">
-        <p>Features</p>
-      </Link>
-      <Link href="#faq">
-        <p>FAQ</p>
-      </Link>
+      {buttonText.map(({ text, href }) => (
+        <Link key={text} href={href} onClick={closeMenu}>
+          {text}
+        </Link>
+      ))}
     </>
   );
 };
