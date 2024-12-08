@@ -7,17 +7,17 @@ const ContactUs: React.FC = () => {
     {
       title: 'Business inquiries',
       description:
-        'Interested in partnering with us, or exploring B2B solutions for your organization? Contact our business team to discuss how Hearify can meet your needs.',
+        'Interested in partnering with us, or exploring B2B solutions for your organization? Contact our business team to discuss how Abify can meet your needs.',
       email: 'info@humanizemyai.com',
     },
     {
       title: 'General inquiries',
       description:
-        'Have a question about Hearify or how we can help you streamline your testing and learning processes? Reach out to us at:',
+        'Have a question about Abify or how we can help you streamline your testing and learning processes? Reach out to us at:',
       email: 'info@humanizemyai.com',
     },
     {
-      title: 'Business inquiries, media & press',
+      title: 'Media & press',
       description: 'For media inquiries, interviews, or press releases, please contact:',
       email: 'info@humanizemyai.com',
     },
