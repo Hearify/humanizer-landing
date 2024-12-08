@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 
 type NavLinkProps = {
-  closeMenu: () => void;
+  closeMenu?: () => void;
 };
 
 const buttonText = [

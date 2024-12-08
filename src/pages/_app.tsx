@@ -46,6 +46,9 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta property="og:site_name" content="Abify" />
         <meta key="og:image" property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL}/main-image.png`} />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preload" href="/src/assets/images/humanize_bg.png" as="image/png" />
+        <link rel="preload" href="/src/assets/images/contact_us.png" as="image/png" />
+
         <link rel="canonical" href={canonicalUrl} />
 
         <meta name="robots" content="index, follow" />
