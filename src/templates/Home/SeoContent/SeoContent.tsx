@@ -147,57 +147,60 @@ const SeoContent: React.FC = () => {
           <h2 className={styles.title}>FAQ</h2>
           <p className={styles.label}>What is Abify?</p>
           <p className={styles.text}>
-            <b>Abify</b> is an advanced AI text humanizer that turns AI-generated text into natural, human-like writing.
-            Our tool helps you bypass AI detectors and create unique, undetectable content that flows naturally.
+            <strong>Abify</strong> is an advanced AI text humanizer that turns AI-generated text into natural,
+            human-like writing. Our tool helps you bypass AI detectors and create unique, undetectable content that
+            flows naturally.
           </p>
           <p className={styles.label}>Can Abify help me pass AI detectors?</p>
           <p className={styles.text}>
-            Yes! <b>Abify</b> is specifically designed to rewrite AI-generated content in a way that makes it
+            Yes! <strong>Abify</strong> is specifically designed to rewrite AI-generated content in a way that makes it
             indistinguishable from human writing, ensuring it can bypass AI detection tools.
           </p>
           <p className={styles.label}>Will my content pass plagiarism checks?</p>
           <p className={styles.text}>
-            Absolutely. <b>Abify</b> not only humanizes your AI content but also restructures it to ensure it’s original
-            and can pass all major plagiarism checks.
+            Absolutely. <strong>Abify</strong> not only humanizes your AI content but also restructures it to ensure
+            it’s original and can pass all major plagiarism checks.
           </p>
           <p className={styles.label}>What languages does Abify support?</p>
           <p className={styles.text}>
-            <b>Abify</b> supports a wide range of languages, including{' '}
-            <b>English, Spanish, French, German, Chinese, Arabic, Hindi, Ukrainian, Japanese, Korean, Portuguese</b>,
-            and many more. Check out the full list above for all supported languages.
+            <strong>Abify</strong> supports a wide range of languages, including{' '}
+            <strong>
+              English, Spanish, French, German, Chinese, Arabic, Hindi, Ukrainian, Japanese, Korean, Portuguese
+            </strong>
+            , and many more. Check out the full list above for all supported languages.
           </p>
           <p className={styles.label}>How does Abify work?</p>
           <p className={styles.text}>
-            Simply <b>upload your AI-generated text</b>, choose your preferred tone and style, and let <b>Abify</b>{' '}
-            humanize it. Within seconds, you’ll receive content that flows naturally and reads like it was written by a
-            person.
+            Simply <strong>upload your AI-generated text</strong>, choose your preferred tone and style, and let{' '}
+            <strong>Abify</strong> humanize it. Within seconds, you’ll receive content that flows naturally and reads
+            like it was written by a person.
           </p>
           <p className={styles.label}>Is my data safe with Abify?</p>
           <p className={styles.text}>
-            Yes, we take privacy seriously. <b>Abify</b> ensures that all your data and content are handled securely,
-            with no risk of exposure or sharing.
+            Yes, we take privacy seriously. <strong>Abify</strong> ensures that all your data and content are handled
+            securely, with no risk of exposure or sharing.
           </p>
           <p className={styles.label}>Can I use Abify for academic content?</p>
           <p className={styles.text}>
-            Yes! <b>Abify</b> is ideal for students, researchers, and academics who want to{' '}
-            <b>rewrite AI-generated content</b>
+            Yes! <strong>Abify</strong> is ideal for students, researchers, and academics who want to{' '}
+            <strong>rewrite AI-generated content</strong>
             in a way that feels human and passes plagiarism checks.
           </p>
           <p className={styles.label}>Is Abify fast?</p>
           <p className={styles.text}>
-            Yes, <b>Abify</b> humanizes your content in a matter of seconds, making it perfect for those who need
-            high-quality, human-like text quickly.
+            Yes, <strong>Abify</strong> humanizes your content in a matter of seconds, making it perfect for those who
+            need high-quality, human-like text quickly.
           </p>
           <p className={styles.label}>Can I customize the tone and style?</p>
           <p className={styles.text}>
-            Absolutely. <b>Abify</b> allows you to choose from a variety of tones and styles, whether you need
+            Absolutely. <strong>Abify</strong> allows you to choose from a variety of tones and styles, whether you need
             professional, casual, creative, or formal content.
           </p>
           <p className={styles.label}>Is Abify suitable for businesses and marketers?</p>
           <p className={styles.text}>
-            Yes! <b>Abify</b> is perfect for businesses, marketers, and content creators looking to produce
-            high-quality, natural-sounding text while <b>bypassing AI detectors</b> and maintaining SEO-friendly
-            content.
+            Yes! <strong>Abify</strong> is perfect for businesses, marketers, and content creators looking to produce
+            high-quality, natural-sounding text while <strong>bypassing AI detectors</strong> and maintaining
+            SEO-friendly content.
           </p>
         </section>
         <br />
