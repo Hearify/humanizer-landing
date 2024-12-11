@@ -15,9 +15,9 @@ const AboutUs: React.FC = () => {
         <div className={styles.section}>
           <h2 className={styles['sub-title']}>Who we are</h2>
           <p>
-            We're a team of innovators, linguists, and AI enthusiasts who are passionate about improving the way people
-            interact with technology. Our diverse backgrounds in artificial intelligence, natural language processing,
-            and user experience design unite us in a common vision: to make AI interactions more human.
+            We&apos;re a team of innovators, linguists, and AI enthusiasts who are passionate about improving the way
+            people interact with technology. Our diverse backgrounds in artificial intelligence, natural language
+            processing, and user experience design unite us in a common vision: to make AI interactions more human.
           </p>
           <p>
             We work with professionals and organizations worldwide to solve AI-driven communication challenges, from
