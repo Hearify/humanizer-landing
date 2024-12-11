@@ -34,6 +34,10 @@
   display: flex;
   align-items: center;
   gap: 100px;
+
+  @include lg {
+    gap: 16px;
+  }
 }
 
 .phone_navigation {

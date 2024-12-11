@@ -11,6 +11,7 @@ const buttonText = [
   { href: '#features', text: 'Features' },
   { href: '#faq', text: 'FAQ' },
   { href: '/contact-us', text: 'Contact Us' },
+  { href: '/about-us', text: 'About Us' },
 ];
 
 const NavLinks: React.FC<NavLinkProps> = ({ closeMenu }) => {
