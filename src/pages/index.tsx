@@ -5,7 +5,7 @@ import Home from '@/templates/Home/Home';
 import type { NextPage } from 'next';
 
 const HomePage: NextPage = () => {
-  const pageTitle = `AI Humanizer for Authentic Content - Write Human AI with Abify`;
+  const pageTitle = `Humanize My AI Text Using an Innovative AI Humanizer Tool`;
   const pageDescription = ` Humanize AI content with Abify, the humanizer that turns robotic results into natural, human writing. Bypass AI detectors, create plagiarism-free content, and write human AI text for marketing, blogging, or business — all in seconds.`;
 
   return (
