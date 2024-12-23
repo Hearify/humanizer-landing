@@ -8,10 +8,15 @@ type AppButtonProps = {
   Icon: React.FC<React.SVGProps<SVGSVGElement>>;
   onClick?: () => void;
   disabled?: boolean;
+  humanized?: boolean;
 };
 
-const AppButton: React.FC<AppButtonProps> = ({ text, Icon, onClick, disabled }) => {
-  const className = cn(styles.AppButton, { [styles['AppButton--disabled']]: disabled });
+const AppButton: React.FC<AppButtonProps> = ({ text, Icon, onClick, disabled, humanized }) => {
+  const className = cn(
+    styles.AppButton,
+    { [styles['AppButton--disabled']]: disabled },
+    { [styles['AppButton--active']]: humanized },
+  );
 
   return (
     <button type="button" onClick={onClick} disabled={disabled} className={className}>
