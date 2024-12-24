@@ -78,8 +78,9 @@
   font-size: 14px;
   font-weight: 400;
 
-  a {
+  button {
     text-decoration: underline;
+    color: var(--general-white, #FEFDFF);
   }
 
   @include lg {

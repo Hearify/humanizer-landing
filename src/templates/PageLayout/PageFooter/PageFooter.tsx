@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 import styles from './PageFooter.module.scss';
 import AbifyFooterLogo from '@/assets/images/footer_logo.svg';
@@ -15,8 +14,8 @@ const PageFooter: React.FC = () => {
             <NavLinks />
           </nav>
           <div className={styles.terms}>
-            Be sure to take a look at our <Link href="https://hearify.org/terms-of-use">Terms of Use</Link> and{' '}
-            <Link href="https://hearify.org/privacy-policy">Privacy Policy</Link>
+            Be sure to take a look at our <button type="button">Terms of Use</button> and{' '}
+            <button type="button">Privacy Policy</button>
           </div>
         </div>
       </div>
