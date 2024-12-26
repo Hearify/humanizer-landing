@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import cn from 'classnames';
 
@@ -38,6 +38,7 @@ function AppSelect<T extends string>({
   onBlur = () => {},
 }: AppSelectProps<T>): React.ReactElement {
   const [isOpened, setIsOpened] = useState<boolean>(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const inputValue: string = options.find(item => item.id === value)?.title ?? '';
   const isInputTouched: boolean = touched === undefined || touched;
@@ -88,8 +89,16 @@ function AppSelect<T extends string>({
           onKeyDown={handleKeyDown}
         />
 
-        <CSSTransition in={isOpened} timeout={300} classNames={styles.AppSelectDropdown} unmountOnExit>
-          <AppSelectDropdown value={value} options={options} onSelect={onSelect} onClose={handleClick} />
+        <CSSTransition
+          in={isOpened}
+          timeout={300}
+          classNames={styles.AppSelectDropdown}
+          unmountOnExit
+          nodeRef={dropdownRef}
+        >
+          <div ref={dropdownRef}>
+            <AppSelectDropdown value={value} options={options} onSelect={onSelect} onClose={handleClick} />
+          </div>
         </CSSTransition>
       </div>
 
