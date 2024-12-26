@@ -28,9 +28,8 @@
       transition: none;
     }
   }
-}
-
-.AppButton--active {
-  background-color: var(--brand-purpe-400, #6444F4);
-  color: var(--general-white, #FEFDFF);
+  &--active {
+    background-color: var(--brand-purpe-400, #6444F4);
+    color: var(--general-white, #FEFDFF);
+  }
 }

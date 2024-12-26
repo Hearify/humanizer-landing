@@ -18,9 +18,11 @@ import HumanizeLoader from '@/components/HumanizeLoader/HumanizeLoader';
 const Humanize: React.FC = () => {
   const [userText, setUserText] = useState<string>('');
   const [humanizedText, setHumanizedText] = useState<string>('');
+  const [purposeValue, setPurposeValue] = useState<string>('');
+  const [toneValue, setToneValue] = useState<string>('');
   const [message, setMessage] = useState<string>('');
   const [statusCode, setStatusCode] = useState<number>();
-  const [CopyButtonText, setCopyButtonText] = useState<string>('COPY TEXT');
+  const [copyButtonText, setCopyButtonText] = useState<string>('COPY TEXT');
   const [isCopied, setIsCopied] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -28,8 +30,43 @@ const Humanize: React.FC = () => {
     result: string;
   }
 
+  const purposeOptions = [
+    { id: 'General Writing', title: 'General Writing' },
+    { id: 'Academic Writing', title: 'Academic Writing' },
+    { id: 'Marketing Material', title: 'Marketing Material' },
+    { id: 'Business Material', title: 'Business Material' },
+    { id: 'Legal Material', title: 'Legal Material' },
+    { id: 'Story', title: 'Story' },
+    { id: 'Letter', title: 'Letter' },
+    { id: 'Report', title: 'Report' },
+  ];
+
+  const toneOptions = [
+    { id: 'Standard', title: 'Standard' },
+    { id: 'Academic', title: 'Academic' },
+    { id: 'Casual', title: 'Casual' },
+    { id: 'Scientific', title: 'Scientific' },
+    { id: 'Professional', title: 'Professional' },
+    { id: 'Blog/SEO', title: 'Blog/SEO' },
+    { id: 'Creative', title: 'Creative' },
+    { id: 'Technical', title: 'Technical' },
+  ];
+
+  const sampleText: string =
+    "Space exploration has captivated humanity's imagination for decades, and the future holds even more exciting possibilities. With advancements in technology, the exploration of our solar system and beyond is becoming increasingly feasible. Missions to Mars, the establishment of lunar bases, and the search for signs of extraterrestrial life are just some of the ambitious goals on the horizon. Private companies are also playing a significant role, with ventures like space tourism and satellite constellations for global internet coverage. Moreover, the development of reusable rockets and advancements in propulsion systems are making space exploration more cost-effective and sustainable. \n" +
+    '\n' +
+    'International collaborations and public-private partnerships are driving innovation and pushing the boundaries of human knowledge. The future of space exploration holds great potential for scientific discoveries, technological advancements, and the expansion of our understanding of the universe.';
+
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
     setUserText(e.target.value);
+  };
+
+  const onSelectPurposeValue = (value: string) => {
+    setPurposeValue(value);
+  };
+
+  const onSelectToneValue = (value: string) => {
+    setToneValue(value);
   };
 
   const handlePaste = async (): Promise<void> => {
@@ -98,12 +135,6 @@ const Humanize: React.FC = () => {
     }
   };
 
-  const dropdownOptions = [
-    { id: 'Option 1', title: 'Option 1' },
-    { id: 'Option 2', title: 'Option 2' },
-    { id: 'Option 3', title: 'Option 3' },
-  ];
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -131,16 +162,16 @@ const Humanize: React.FC = () => {
               <p>Enter your text here</p>
               <div className={styles['select-container']}>
                 <AppSelect
-                  value={userText}
+                  value={purposeValue}
                   placeholder="Choose Purpose"
-                  options={dropdownOptions}
-                  onSelect={() => console.log(userText)}
+                  options={purposeOptions}
+                  onSelect={onSelectPurposeValue}
                 />
                 <AppSelect
-                  value={userText}
+                  value={toneValue}
                   placeholder="Choose Tone"
-                  options={dropdownOptions}
-                  onSelect={() => console.log(userText)}
+                  options={toneOptions}
+                  onSelect={onSelectToneValue}
                 />
               </div>
             </div>
@@ -153,7 +184,12 @@ const Humanize: React.FC = () => {
             <div className={styles['enter-text-btns']}>
               <div className={styles['paste-try-btns']}>
                 <AppButton text="PASTE TEXT" Icon={DocumentTextIcon} onClick={handlePaste} disabled={false} />
-                <AppButton text="TRY A SAMPLE" Icon={DocumentCheckIcon} disabled={false} />
+                <AppButton
+                  text="TRY A SAMPLE"
+                  Icon={DocumentCheckIcon}
+                  onClick={() => setUserText(sampleText)}
+                  disabled={false}
+                />
               </div>
               <AppButton
                 text="HUMANIZE"
@@ -184,7 +220,7 @@ const Humanize: React.FC = () => {
               </div>
               <div className={styles['enter-text-btns']}>
                 <AppButton
-                  text={CopyButtonText}
+                  text={copyButtonText}
                   Icon={isCopied ? CheckIcon : DocumentDuplicateIcon}
                   onClick={handleCopy}
                   disabled={humanizedText.length <= 19}

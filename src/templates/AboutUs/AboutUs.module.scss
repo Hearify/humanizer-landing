@@ -6,6 +6,7 @@
   justify-content: center;
   font-family: var(--font-nunito), sans-serif;
   width: 100%;
+  padding-top: 60px;
   background-image:
           linear-gradient(to top, #ffffff, rgba(0, 0, 0, 0.3) 3%),
           url('~../../../public/contact_us.png');
@@ -33,7 +34,7 @@
     max-width: 900px;
   }
   @include md {
-    padding: 16px 32px 80px 32px;
+    padding: 24px 32px 80px 32px;
   }
 }
 
