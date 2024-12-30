@@ -50,8 +50,7 @@ const PageHeader: React.FC = () => {
               <div className={styles['burger-wrapper']}>
                 {!isDeviceSmall && (
                   <button type="button" className={styles['humanize-btn']}>
-                    <SparklesIcon width={24} height={24} />
-                    Humanize
+                    TRY A LIVE DEMO
                   </button>
                 )}
                 <button
@@ -71,8 +70,7 @@ const PageHeader: React.FC = () => {
                     <NavLinks closeMenu={closeMenu} />
                     {isDeviceSmall && (
                       <button type="button" className={styles['humanize-btn']}>
-                        <SparklesIcon width={24} height={24} />
-                        Humanize
+                        TRY A LIVE DEMO
                       </button>
                     )}
                   </div>
@@ -84,8 +82,7 @@ const PageHeader: React.FC = () => {
         </div>
         {isDeviceLarge && (
           <button type="button" className={styles['humanize-btn']}>
-            <SparklesIcon width={24} height={24} />
-            Humanize
+            TRY A LIVE DEMO
           </button>
         )}
       </div>

@@ -3,10 +3,9 @@
 .AppSelect {
   width: 100%;
   color: var(--general-black);
-  background-color: transparent !important;
-  // TODO(Sasha): fix this after removing global styles
-  border: 1px solid var(--brand-purpe-400) !important;
+  border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 8px;
+  background-color: var(--general-white) !important;
   outline: none;
   user-select: none;
   cursor: pointer;
@@ -39,7 +38,7 @@
   &__icon {
     pointer-events: none;
     position: absolute;
-    top: 10px;
+    top: 12px;
     right: 10px;
     transition: $default-transition;
 
@@ -57,21 +56,25 @@
 
   &--sm {
     @include text-field-sm;
-    padding: 7px 11px !important;
+    padding: 9px 20px 9px 8px !important;
 
     +.AppSelect__icon {
-      top: 8px;
+      right: 8px;
     }
   }
 
   &--md {
     @include text-field-md;
-    padding: 9px 11px !important;
+    padding: 9px 30px 9px 11px !important;
   }
 
   &--lg {
     @include text-field-lg;
-    padding: 13px 11px !important;
+    padding: 13px 11px 13px 11px !important;
+
+    +.AppSelect__icon {
+      top: 16px;
+    }
   }
 
   &--disabled {

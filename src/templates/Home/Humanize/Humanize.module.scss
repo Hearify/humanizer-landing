@@ -8,7 +8,7 @@
   font-family: var(--font-nunito), sans-serif;
   width: 100%;
   height: 830px;
-  padding-top: 88px;
+  padding-top: 96px;
   background-image:
           linear-gradient(to top, #ffffff, rgba(0, 0, 0, 0) 50%),
           url('~../../../../public/humanize_bg.png');
@@ -28,7 +28,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: 28px;
   color: var(--white, #FFFFFF);
 
   @include lg {
@@ -39,6 +39,7 @@
     width: 700px;
     align-items: flex-start;
     justify-content: center;
+    gap: 52px;
   }
 
   @include sm {
@@ -53,6 +54,11 @@
   align-items: flex-start;
   justify-content: center;
   gap: 14px;
+  width: 700px;
+
+  @include md {
+    width: 100%;
+  }
 }
 
 .title {
@@ -78,19 +84,17 @@
 }
 
 .description {
-  width: 700px;
-
-  p:nth-child(1){
-    @include text-subtitle-3;
-    font-weight: 400;
-  }
-
-  @include md {
-    width: auto;
-  }
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  gap: 12px;
+  color: var(--general-white);
 }
 
 .humanize-btn {
+  width: 290px;
   font-size: 14px;
   font-weight: 600;
   padding: 12px 16px;
@@ -152,6 +156,10 @@
   display: flex;
   width: 100%;
   gap: 16px;
+
+  @include sm {
+    flex-direction: column;
+  }
 }
 
 .textarea {

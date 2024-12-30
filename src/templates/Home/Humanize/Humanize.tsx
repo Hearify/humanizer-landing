@@ -140,26 +140,28 @@ const Humanize: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.title}>
-            <h2 className={styles.title}>AI Humanizer by Abify</h2>
-            <h1 className={styles.title}>
-              AI to Human Text Converter: Transform AI into Undetectable & Unique Writing
-            </h1>
+            <h2 className={styles.title}>AI to Human Text Converter</h2>
+            <h1 className={styles.title}>Transform AI into Undetectable & Unique Writing </h1>
           </div>
           <div className={styles.description}>
             <p>
               Change AI-generated content into natural, readable, and engaging text that bypasses AI detectors
-              effortlessly. Boost your content’s appeal and ensure it connects with your audience on a human level — all
-              while saving time and improving your workflow.
+              effortlessly.
+            </p>
+            <p>
+              Boost your content’s appeal and ensure it connects with your audience on a human level — all while saving
+              time and improving your workflow. Abify is your humanizer that makes your writing undetectable and truly
+              effective.
             </p>
           </div>
           <button className={styles['humanize-btn']} type="button">
-            START HUMANIZING NOW – FOR FREE
+            TRY A LIVE DEMO
           </button>
         </div>
         <div className={styles['humanize-container']}>
           <div className={cn(styles['input-container'], styles['enter-text-container'])}>
             <div className={styles['select-wrapper']}>
-              <p>Enter your text here</p>
+              <p>Paste your AI-generated content here</p>
               <div className={styles['select-container']}>
                 <AppSelect
                   value={purposeValue}
@@ -202,7 +204,7 @@ const Humanize: React.FC = () => {
           </div>
           <div className={cn(styles['input-container'], styles.results)}>
             <div className={styles['results-title']}>
-              <p>Check Result</p>
+              <p>Humanized Output</p>
             </div>
             <p className={statusCode === 200 ? styles.successMessage : styles.processingMessage}>
               {statusCode === 200 && <CheckCircleIcon width={20} height={20} />}

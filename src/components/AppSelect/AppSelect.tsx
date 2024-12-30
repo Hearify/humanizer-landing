@@ -1,9 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import { CSSTransition } from 'react-transition-group';
 import cn from 'classnames';
 
-import AppSelectDropdown from './AppSelectDropdown/AppSelectDropdown';
 import styles from './AppSelect.module.scss';
+import AppSelectDropdown from '@/components/AppSelect/AppSelectDropdown/AppSelectDropdown'; // Assuming you're using CSS Modules
 
 export type AppSelectProps<T extends string = string> = {
   name?: string;
@@ -38,15 +39,13 @@ function AppSelect<T extends string>({
   onBlur = () => {},
 }: AppSelectProps<T>): React.ReactElement {
   const [isOpened, setIsOpened] = useState<boolean>(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
   const inputValue: string = options.find(item => item.id === value)?.title ?? '';
   const isInputTouched: boolean = touched === undefined || touched;
   const errorMessage: string = isInputTouched && error ? error : '';
   const helperText: string = errorMessage || note || '';
 
   const className = cn(
-    styles.AppSelect__wrapper, //
+    styles.AppSelect__wrapper,
     errorMessage && styles['AppSelect--error'],
     disabled && styles['AppSelect--disabled'],
   );
@@ -67,12 +66,6 @@ function AppSelect<T extends string>({
     onBlur(e);
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>): void => {
-    if (e.key === 'ArrowDown') {
-      handleFocus();
-    }
-  };
-
   return (
     <div className={className}>
       <div className={styles.AppSelect__container}>
@@ -86,19 +79,21 @@ function AppSelect<T extends string>({
           onPointerDown={handleClick}
           onFocus={handleFocus}
           onBlur={handleBlur}
-          onKeyDown={handleKeyDown}
         />
 
-        <CSSTransition
-          in={isOpened}
-          timeout={300}
-          classNames={styles.AppSelectDropdown}
-          unmountOnExit
-          nodeRef={dropdownRef}
-        >
-          <div ref={dropdownRef}>
-            <AppSelectDropdown value={value} options={options} onSelect={onSelect} onClose={handleClick} />
-          </div>
+        <ChevronDownIcon
+          width={20}
+          height={20}
+          className={cn(styles.AppSelect__icon, { [styles['AppSelect__icon--active']]: isOpened })}
+        />
+
+        <CSSTransition in={isOpened} timeout={300} classNames="AppSelectDropdown" unmountOnExit>
+          <AppSelectDropdown //
+            value={value}
+            options={options}
+            onSelect={onSelect}
+            onClose={handleClick}
+          />
         </CSSTransition>
       </div>
 
