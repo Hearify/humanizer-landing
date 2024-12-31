@@ -7,7 +7,7 @@ const SeoContent: React.FC = () => {
     {
       id: 1,
       quote:
-        'Abify has helped me improve my blog posts by making them more natural and engaging for readers. It\'s the perfect tool for anyone who wants to create high-quality content quickly.',
+        "Abify has helped me improve my blog posts by making them more natural and engaging for readers. It's the perfect tool for anyone who wants to create high-quality content quickly.",
       author: 'Anna',
       role: 'blogger',
     },
@@ -21,7 +21,7 @@ const SeoContent: React.FC = () => {
     {
       id: 3,
       quote:
-        'Thanks to Abify, we have significantly accelerated the creation of advertising texts for our clients. It doesn\'t just edit, but adapts the text to make it sound the way it should.',
+        "Thanks to Abify, we have significantly accelerated the creation of advertising texts for our clients. It doesn't just edit, but adapts the text to make it sound the way it should.",
       author: 'Kate',
       role: 'head of a marketing agency',
     },
@@ -35,7 +35,7 @@ const SeoContent: React.FC = () => {
     {
       id: 5,
       quote:
-        'Abify helped me quickly adapt texts for different markets thanks to its multilingual support. I don\'t waste time on manual editing - everything works perfectly.',
+        "Abify helped me quickly adapt texts for different markets thanks to its multilingual support. I don't waste time on manual editing - everything works perfectly.",
       author: 'Jessy',
       role: 'international marketing manager',
     },
@@ -50,34 +50,64 @@ const SeoContent: React.FC = () => {
     {
       id: 2,
       title: 'Choose Your Tone & Preferences',
-      description: 'Select the tone and style that best fits your needs, whether it\'s conversational, professional, or creative.',
+      description:
+        "Select the tone and style that best fits your needs, whether it's conversational, professional, or creative.",
     },
     {
       id: 3,
       title: 'Abify Does the Rest',
-      description: 'Our advanced AI technology works its magic, rewriting and transforming your text to sound natural and undetectable.',
+      description:
+        'Our advanced AI technology works its magic, rewriting and transforming your text to sound natural and undetectable.',
     },
     {
       id: 4,
       title: 'Export & Use',
-      description: 'Once your content is humanized, it\'s ready to publish or share—no more awkward or robotic sentences.',
+      description:
+        "Once your content is humanized, it's ready to publish or share—no more awkward or robotic sentences.",
     },
   ];
- 
+
   const tableData = [
     { id: 1, feature: 'Humanize AI Content', values: Array(12).fill('✅') },
     { id: 2, feature: 'Bypass AI Detectors', values: Array(12).fill('✅') },
-    { id: 3, feature: 'SEO Optimization', values: ['✅', '❌', '❌', '❌', '✅', '❌', '❌', '❌', '❌', '❌', '✅', '❌'] },
-    { id: 4, feature: 'Customizable Tones & Styles', values: ['✅', '❌', '✅', '❌', '✅', '❌', '❌', '❌', '✅', '✅', '❌', '✅'] },
-    { id: 5, feature: 'Multilingual Support', values: ['✅', '❌', '❌', '❌', '✅', '❌', '❌', '❌', '❌', '❌', '❌', '❌'] },
-    { id: 6, feature: 'Plagiarism-Free Output', values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '✅', '✅', '❌', '✅'] },
+    {
+      id: 3,
+      feature: 'SEO Optimization',
+      values: ['✅', '❌', '❌', '❌', '✅', '❌', '❌', '❌', '❌', '❌', '✅', '❌'],
+    },
+    {
+      id: 4,
+      feature: 'Customizable Tones & Styles',
+      values: ['✅', '❌', '✅', '❌', '✅', '❌', '❌', '❌', '✅', '✅', '❌', '✅'],
+    },
+    {
+      id: 5,
+      feature: 'Multilingual Support',
+      values: ['✅', '❌', '❌', '❌', '✅', '❌', '❌', '❌', '❌', '❌', '❌', '❌'],
+    },
+    {
+      id: 6,
+      feature: 'Plagiarism-Free Output',
+      values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '✅', '✅', '❌', '✅'],
+    },
     { id: 7, feature: 'Fast Processing', values: Array(12).fill('✅') },
-    { id: 8, feature: 'User-Friendly Interface', values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '❌', '✅', '✅'] },
-    { id: 9, feature: 'Data Security', values: ['✅', '❌', '❌', '❌', '❌', '❌', '❌', '❌', '❌', '✅', '❌', '❌'] },
-    { id: 10, feature: 'Free Demo Available', values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '✅', '✅', '❌', '✅'] },
+    {
+      id: 8,
+      feature: 'User-Friendly Interface',
+      values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '❌', '✅', '✅'],
+    },
+    {
+      id: 9,
+      feature: 'Data Security',
+      values: ['✅', '❌', '❌', '❌', '❌', '❌', '❌', '❌', '❌', '✅', '❌', '❌'],
+    },
+    {
+      id: 10,
+      feature: 'Free Demo Available',
+      values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '✅', '✅', '❌', '✅'],
+    },
   ];
 
- 
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -95,8 +125,8 @@ const SeoContent: React.FC = () => {
           </p>
           <p className={styles.label}>Students and researchers</p>
           <p className={styles.text}>
-            Transform academic texts into professionally written materials that pass plagiarism checks and look authentic.
-            Ideal for essays, term papers, and research projects.
+            Transform academic texts into professionally written materials that pass plagiarism checks and look
+            authentic. Ideal for essays, term papers, and research projects.
           </p>
           <p className={styles.label}>Business and brands</p>
           <p className={styles.text}>
@@ -124,7 +154,7 @@ const SeoContent: React.FC = () => {
         <section className="space-y-6">
           <h2 className="text-3xl font-bold mb-6">How Does Abify Work?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {steps.map((step) => (
+            {steps.map(step => (
               <div key={step.id} className="bg-white p-6 rounded-lg shadow-md">
                 <div className="text-xl font-bold mb-3 text-blue-600">
                   {step.id}. {step.title}
@@ -134,7 +164,7 @@ const SeoContent: React.FC = () => {
             ))}
           </div>
         </section>
-        
+
         <section className={styles.body}>
           <h2 className={styles.title}>Humanize Beyond Detection: Abify Provides Original and Authentic Writing</h2>
           <p className={styles.text}>
@@ -154,7 +184,7 @@ const SeoContent: React.FC = () => {
 
         {/* Testimonials Section */}
         <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial) => (
+          {testimonials.map(testimonial => (
             <div key={testimonial.id} className="bg-white p-6 rounded-lg shadow-md">
               <p className="text-gray-700 mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
               <div className="text-gray-900 font-medium">
@@ -186,7 +216,7 @@ const SeoContent: React.FC = () => {
                 </tr>
               </thead>
               <tbody>
-                {tableData.map((row) => (
+                {tableData.map(row => (
                   <tr key={row.id} className="hover:bg-gray-50">
                     <td className="border border-gray-200 p-3 font-medium">{row.feature}</td>
                     {row.values.map((value, i) => (
@@ -200,7 +230,7 @@ const SeoContent: React.FC = () => {
             </table>
           </div>
         </section>
-        
+
         <section className={styles.body}>
           <h2 className={styles.title}>FAQ</h2>
           <p className={styles.label}>What is Abify?</p>
@@ -221,7 +251,7 @@ const SeoContent: React.FC = () => {
           </p>
           <p className={styles.label}>What languages does Abify support?</p>
           <p className={styles.text}>
-            <strong>Abify</strong> supports a wide range of languages, including{" "}
+            <strong>Abify</strong> supports a wide range of languages, including{' '}
             <strong>
               English, Spanish, French, German, Chinese, Arabic, Hindi, Ukrainian, Japanese, Korean, Portuguese
             </strong>
@@ -229,7 +259,7 @@ const SeoContent: React.FC = () => {
           </p>
           <p className={styles.label}>How does Abify work?</p>
           <p className={styles.text}>
-            Simply <strong>upload your AI-generated text</strong>, choose your preferred tone and style, and let{" "}
+            Simply <strong>upload your AI-generated text</strong>, choose your preferred tone and style, and let{' '}
             <strong>Abify</strong> humanize it. Within seconds, you’ll receive content that flows naturally and reads
             like it was written by a person.
           </p>
@@ -240,7 +270,7 @@ const SeoContent: React.FC = () => {
           </p>
           <p className={styles.label}>Can I use Abify for academic content?</p>
           <p className={styles.text}>
-            Yes! <strong>Abify</strong> is ideal for students, researchers, and academics who want to{" "}
+            Yes! <strong>Abify</strong> is ideal for students, researchers, and academics who want to{' '}
             <strong>rewrite AI-generated content</strong>
             in a way that feels human and passes plagiarism checks.
           </p>
@@ -261,9 +291,7 @@ const SeoContent: React.FC = () => {
             SEO-friendly content.
           </p>
           <p className={styles.label}>Does Abify integrate with other platforms?</p>
-          <p className={styles.text}>
-            Yes, you can export text in the desired format.
-          </p>
+          <p className={styles.text}>Yes, you can export text in the desired format.</p>
           <p className={styles.label}>Does Abify work with text generated by ChatGPT or Claude?</p>
           <p className={styles.text}>
             Absolutely! Abify is a powerful Chat GPT humanizer designed to refine any AI-generated text.

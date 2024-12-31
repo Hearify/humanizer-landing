@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import cn from 'classnames';
-import { SparklesIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 
 import styles from './PageHeader.module.scss';
