@@ -194,42 +194,44 @@ const SeoContent: React.FC = () => {
           ))}
         </section>
 
-        <section className="space-y-6">
-          <h2 className="text-3xl font-bold mb-6">6. Порівняння з конкурентами (Comparison Table)</h2>
-          <div className="overflow-x-auto shadow-md rounded-lg">
-            <table className="w-full border-collapse bg-white">
-              <thead>
-                <tr className="bg-gray-50">
-                  <th className="border border-gray-200 p-3 text-left font-semibold">Function</th>
-                  <th className="border border-gray-200 p-3 text-center font-semibold">Abify</th>
-                  <th className="border border-gray-200 p-3 text-center font-semibold">HumanizeAI.pro</th>
-                  <th className="border border-gray-200 p-3 text-center font-semibold">HumanizeAI.io</th>
-                  <th className="border border-gray-200 p-3 text-center font-semibold">AIHumanize.io</th>
-                  <th className="border border-gray-200 p-3 text-center font-semibold">HumanizeAIText.ai</th>
-                  <th className="border border-gray-200 p-3 text-center font-semibold">WriteHuman.ai</th>
-                  <th className="border border-gray-200 p-3 text-center font-semibold">Humanizer.org</th>
-                  <th className="border border-gray-200 p-3 text-center font-semibold">Phrasly.ai</th>
-                  <th className="border border-gray-200 p-3 text-center font-semibold">BypassAI.ai</th>
-                  <th className="border border-gray-200 p-3 text-center font-semibold">StealthWriter.ai</th>
-                  <th className="border border-gray-200 p-3 text-center font-semibold">Undetectable.ai</th>
-                  <th className="border border-gray-200 p-3 text-center font-semibold">JustDone.ai</th>
-                </tr>
-              </thead>
-              <tbody>
-                {tableData.map(row => (
-                  <tr key={row.id} className="hover:bg-gray-50">
-                    <td className="border border-gray-200 p-3 font-medium">{row.feature}</td>
-                    {row.values.map((value, i) => (
-                      <td key={`${row.id}-${i}`} className="border border-gray-200 p-3 text-center">
-                        {value}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
+
+<section className="space-y-6">
+  <h2 className="text-3xl font-bold mb-6">Abify vs Other AI Humanizers</h2>
+  <div className="overflow-x-auto shadow-md rounded-lg">
+    <table className="w-full border-collapse bg-white">
+      <thead>
+        <tr className="bg-gray-50">
+          <th className="border border-gray-200 p-3 text-left font-semibold">Function</th>
+          <th className="border border-gray-200 p-3 text-center font-semibold">Abify</th>
+          <th className="border border-gray-200 p-3 text-center font-semibold">HumanizeAI.pro</th>
+          <th className="border border-gray-200 p-3 text-center font-semibold">HumanizeAI.io</th>
+          <th className="border border-gray-200 p-3 text-center font-semibold">AIHumanize.io</th>
+          <th className="border border-gray-200 p-3 text-center font-semibold">HumanizeAIText.ai</th>
+          <th className="border border-gray-200 p-3 text-center font-semibold">WriteHuman.ai</th>
+          <th className="border border-gray-200 p-3 text-center font-semibold">Humanizer.org</th>
+          <th className="border border-gray-200 p-3 text-center font-semibold">Phrasly.ai</th>
+          <th className="border border-gray-200 p-3 text-center font-semibold">BypassAI.ai</th>
+          <th className="border border-gray-200 p-3 text-center font-semibold">StealthWriter.ai</th>
+          <th className="border border-gray-200 p-3 text-center font-semibold">Undetectable.ai</th>
+          <th className="border border-gray-200 p-3 text-center font-semibold">JustDone.ai</th>
+        </tr>
+      </thead>
+      <tbody>
+        {tableData.map(row => (
+          <tr key={row.id} className="hover:bg-gray-50">
+            <td className="border border-gray-200 p-3 font-medium">{row.feature}</td>
+            {row.values.map((value, i) => (
+              <td key={`${row.id}-${i}`} className="border border-gray-200 p-3 text-center">
+                {value}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
+
 
         <section className={styles.body}>
           <h2 className={styles.title}>FAQ</h2>
