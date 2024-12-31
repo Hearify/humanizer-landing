@@ -7,74 +7,74 @@ const SeoContent: React.FC = () => {
     {
       id: 1,
       quote:
-        'Abify has helped me improve my blog posts by making them more natural and engaging for readers. It\'s the perfect tool for anyone who wants to create high-quality content quickly.',
-      author: 'Anna',
-      role: 'blogger',
+        "Abify has helped me improve my blog posts by making them more natural and engaging for readers. It\"s the perfect tool for anyone who wants to create high-quality content quickly.",
+      author: "Anna",
+      role: "blogger",
     },
     {
       id: 2,
       quote:
-        'I was always afraid of AI detectors when I was working on academic texts, but Abify solved this problem. Now I am sure that my work sounds professional and passes plagiarism checks.',
-      author: 'Max',
-      role: 'PhD student',
+        "I was always afraid of AI detectors when I was working on academic texts, but Abify solved this problem. Now I am sure that my work sounds professional and passes plagiarism checks.",
+      author: "Max",
+      role: "PhD student",
     },
     {
       id: 3,
       quote:
-        'Thanks to Abify, we have significantly accelerated the creation of advertising texts for our clients. It doesn\'t just edit, but adapts the text to make it sound the way it should.',
-      author: 'Kate',
-      role: 'head of a marketing agency',
+        "Thanks to Abify, we have significantly accelerated the creation of advertising texts for our clients. It doesn\"t just edit, but adapts the text to make it sound the way it should.",
+      author: "Kate",
+      role: "head of a marketing agency",
     },
     {
       id: 4,
       quote:
-        'Our marketing materials now look much more professional and resonate with our audience. Abify has become an integral part of our content strategy.',
-      author: 'Alex',
-      role: 'startup owner',
+        "Our marketing materials now look much more professional and resonate with our audience. Abify has become an integral part of our content strategy.",
+      author: "Alex",
+      role: "startup owner",
     },
     {
       id: 5,
       quote:
-        'Abify helped me quickly adapt texts for different markets thanks to its multilingual support. I don\'t waste time on manual editing - everything works perfectly.',
-      author: 'Jessy',
-      role: 'international marketing manager',
+        "Abify helped me quickly adapt texts for different markets thanks to its multilingual support. I don\"t waste time on manual editing - everything works perfectly.",
+      author: "Jessy",
+      role: "international marketing manager",
     },
   ];
 
   const steps = [
     {
       id: 1,
-      title: 'Input Your AI-Generated Text',
-      description: 'Upload your AI-generated content into our easy-to-use platform.',
+      title: "Input Your AI-Generated Text",
+      description: "Upload your AI-generated content into our easy-to-use platform.",
     },
     {
       id: 2,
-      title: 'Choose Your Tone & Preferences',
-      description: 'Select the tone and style that best fits your needs, whether it\'s conversational, professional, or creative.',
+      title: "Choose Your Tone & Preferences",
+      description: "Select the tone and style that best fits your needs, whether it\"s conversational, professional, or creative.",
     },
     {
       id: 3,
-      title: 'Abify Does the Rest',
-      description: 'Our advanced AI technology works its magic, rewriting and transforming your text to sound natural and undetectable.',
+      title: "Abify Does the Rest",
+      description: "Our advanced AI technology works its magic, rewriting and transforming your text to sound natural and undetectable.",
     },
     {
       id: 4,
-      title: 'Export & Use',
-      description: 'Once your content is humanized, it\'s ready to publish or share—no more awkward or robotic sentences.',
+      title: "Export & Use",
+      description: "Once your content is humanized, it\"s ready to publish or share—no more awkward or robotic sentences.",
     },
   ];
 
   const tableData = [
-    { id: 1, feature: 'Humanize AI Content', values: Array(12).fill('✅') },
-    { id: 2, feature: 'Bypass AI Detectors', values: Array(12).fill('✅') },
-    { id: 3, feature: 'SEO Optimization', values: ['✅', '❌', '❌', '❌', '✅', '❌', '❌', '❌', '❌', '❌', '✅', '❌'] },
-    { id: 4, feature: 'Customizable Tones & Styles', values: ['✅', '❌', '✅', '❌', '✅', '❌', '❌', '❌', '✅', '✅', '❌', '✅'] },
-    { id: 5, feature: 'Multilingual Support', values: ['✅', '❌', '❌', '❌', '✅', '❌', '❌', '❌', '❌', '❌', '❌', '❌'] },
-    { id: 6, feature: 'Plagiarism-Free Output', values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '✅', '✅', '❌', '✅'] },
-    { id: 7, feature: 'Fast Processing', values: Array(12).fill('✅') },
-    { id: 8, feature: 'User-Friendly Interface', values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '❌', '✅', '✅'] },
-    { id: 9, feature: 'Data Security', values: ['✅', '❌', '❌', '❌', '❌', '❌', '❌', '❌', '❌', '✅', '❌', '❌'] },
-    { id: 10, feature: 'Free Demo Available', values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '✅', '✅', '❌', '✅'] },
+    { id: 1, feature: "Humanize AI Content", values: Array(12).fill("✅") },
+    { id: 2, feature: "Bypass AI Detectors", values: Array(12).fill("✅") },
+    { id: 3, feature: "SEO Optimization", values: ["✅", "❌", "❌", "❌", "✅", "❌", "❌", "❌", "❌", "❌", "✅", "❌"] },
+    { id: 4, feature: "Customizable Tones & Styles", values: ["✅", "❌", "✅", "❌", "✅", "❌", "❌", "❌", "✅", "✅", "❌", "✅"] },
+    { id: 5, feature: "Multilingual Support", values: ["✅", "❌", "❌", "❌", "✅", "❌", "❌", "❌", "❌", "❌", "❌", "❌"] },
+    { id: 6, feature: "Plagiarism-Free Output", values: ["✅", "✅", "✅", "✅", "✅", "✅", "✅", "❌", "✅", "✅", "❌", "✅"] },
+    { id: 7, feature: "Fast Processing", values: Array(12).fill("✅") },
+    { id: 8, feature: "User-Friendly Interface", values: ["✅", "✅", "✅", "✅", "✅", "✅", "✅", "✅", "❌", "❌", "✅", "✅"] },
+    { id: 9, feature: "Data Security", values: ["✅", "❌", "❌", "❌", "❌", "❌", "❌", "❌", "❌", "✅", "❌", "❌"] },
+    { id: 10, feature: "Free Demo Available", values: ["✅", "✅", "✅", "✅", "✅", "✅", "✅", "❌", "✅", "✅", "❌", "✅"] },
   ];
   
   return (
@@ -220,7 +220,7 @@ const SeoContent: React.FC = () => {
           </p>
           <p className={styles.label}>What languages does Abify support?</p>
           <p className={styles.text}>
-            <strong>Abify</strong> supports a wide range of languages, including{' '}
+            <strong>Abify</strong> supports a wide range of languages, including{" "}
             <strong>
               English, Spanish, French, German, Chinese, Arabic, Hindi, Ukrainian, Japanese, Korean, Portuguese
             </strong>
@@ -228,7 +228,7 @@ const SeoContent: React.FC = () => {
           </p>
           <p className={styles.label}>How does Abify work?</p>
           <p className={styles.text}>
-            Simply <strong>upload your AI-generated text</strong>, choose your preferred tone and style, and let{' '}
+            Simply <strong>upload your AI-generated text</strong>, choose your preferred tone and style, and let{" "}
             <strong>Abify</strong> humanize it. Within seconds, you’ll receive content that flows naturally and reads
             like it was written by a person.
           </p>
@@ -239,7 +239,7 @@ const SeoContent: React.FC = () => {
           </p>
           <p className={styles.label}>Can I use Abify for academic content?</p>
           <p className={styles.text}>
-            Yes! <strong>Abify</strong> is ideal for students, researchers, and academics who want to{' '}
+            Yes! <strong>Abify</strong> is ideal for students, researchers, and academics who want to{" "}
             <strong>rewrite AI-generated content</strong>
             in a way that feels human and passes plagiarism checks.
           </p>
