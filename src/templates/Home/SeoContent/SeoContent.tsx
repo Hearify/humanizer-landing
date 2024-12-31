@@ -220,13 +220,11 @@ const SeoContent: React.FC = () => {
         {tableData.map(row => (
           <tr key={row.id} className="hover:bg-gray-50">
             <td className="border border-gray-200 p-3 font-medium">{row.feature}</td>
-            {row.values.map((value, i) => (
-              <td key={`${row.id}-${i}`} className="border border-gray-200 p-3 text-center">
+            {row.values.map((value, index) => (
+              <td key={`${row.id}-${value}-${index}`} className="border border-gray-200 p-3 text-center">
                 {value}
               </td>
-            ))}
-          </tr>
-        ))}
+          ))}
       </tbody>
     </table>
   </div>
