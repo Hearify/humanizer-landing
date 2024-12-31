@@ -3,50 +3,78 @@ import React from 'react';
 import styles from './SeoContent.module.scss';
 
 const SeoContent: React.FC = () => {
-  const testimonials = [
+ const testimonials = [
     {
-      quote: "Abify has helped me improve my blog posts by making them more natural and engaging for readers. It's the perfect tool for anyone who wants to create high-quality content quickly.",
-      author: "Anna",
-      role: "blogger"
+      id: 1,
+      quote:
+        'Abify has helped me improve my blog posts by making them more natural and engaging for readers. It\'s the perfect tool for anyone who wants to create high-quality content quickly.',
+      author: 'Anna',
+      role: 'blogger',
     },
     {
-      quote: "I was always afraid of AI detectors when I was working on academic texts, but Abify solved this problem. Now I am sure that my work sounds professional and passes plagiarism checks.",
-      author: "Max",
-      role: "PhD student"
+      id: 2,
+      quote:
+        'I was always afraid of AI detectors when I was working on academic texts, but Abify solved this problem. Now I am sure that my work sounds professional and passes plagiarism checks.',
+      author: 'Max',
+      role: 'PhD student',
     },
     {
-      quote: "Thanks to Abify, we have significantly accelerated the creation of advertising texts for our clients. It doesn't just edit, but adapts the text to make it sound the way it should.",
-      author: "Kate",
-      role: "head of a marketing agency"
+      id: 3,
+      quote:
+        'Thanks to Abify, we have significantly accelerated the creation of advertising texts for our clients. It doesn\'t just edit, but adapts the text to make it sound the way it should.',
+      author: 'Kate',
+      role: 'head of a marketing agency',
     },
     {
-      quote: "Our marketing materials now look much more professional and resonate with our audience. Abify has become an integral part of our content strategy.",
-      author: "Alex",
-      role: "startup owner"
+      id: 4,
+      quote:
+        'Our marketing materials now look much more professional and resonate with our audience. Abify has become an integral part of our content strategy.',
+      author: 'Alex',
+      role: 'startup owner',
     },
     {
-      quote: "Abify helped me quickly adapt texts for different markets thanks to its multilingual support. I don't waste time on manual editing - everything works perfectly.",
-      author: "Jessy",
-      role: "international marketing manager"
-    }
+      id: 5,
+      quote:
+        'Abify helped me quickly adapt texts for different markets thanks to its multilingual support. I don\'t waste time on manual editing - everything works perfectly.',
+      author: 'Jessy',
+      role: 'international marketing manager',
+    },
   ];
-    const steps = [
+
+  const steps = [
     {
-      title: "Input Your AI-Generated Text",
-      description: "Upload your AI-generated content into our easy-to-use platform."
+      id: 1,
+      title: 'Input Your AI-Generated Text',
+      description: 'Upload your AI-generated content into our easy-to-use platform.',
     },
     {
-      title: "Choose Your Tone & Preferences",
-      description: "Select the tone and style that best fits your needs, whether it's conversational, professional, or creative."
+      id: 2,
+      title: 'Choose Your Tone & Preferences',
+      description: 'Select the tone and style that best fits your needs, whether it\'s conversational, professional, or creative.',
     },
     {
-      title: "Abify Does the Rest",
-      description: "Our advanced AI technology works its magic, rewriting and transforming your text to sound natural and undetectable."
+      id: 3,
+      title: 'Abify Does the Rest',
+      description: 'Our advanced AI technology works its magic, rewriting and transforming your text to sound natural and undetectable.',
     },
     {
-      title: "Export & Use",
-      description: "Once your content is humanized, it's ready to publish or share—no more awkward or robotic sentences."
-    }
+      id: 4,
+      title: 'Export & Use',
+      description: 'Once your content is humanized, it\'s ready to publish or share—no more awkward or robotic sentences.',
+    },
+  ];
+
+  const tableData = [
+    { id: 1, feature: 'Humanize AI Content', values: Array(12).fill('✅') },
+    { id: 2, feature: 'Bypass AI Detectors', values: Array(12).fill('✅') },
+    { id: 3, feature: 'SEO Optimization', values: ['✅', '❌', '❌', '❌', '✅', '❌', '❌', '❌', '❌', '❌', '✅', '❌'] },
+    { id: 4, feature: 'Customizable Tones & Styles', values: ['✅', '❌', '✅', '❌', '✅', '❌', '❌', '❌', '✅', '✅', '❌', '✅'] },
+    { id: 5, feature: 'Multilingual Support', values: ['✅', '❌', '❌', '❌', '✅', '❌', '❌', '❌', '❌', '❌', '❌', '❌'] },
+    { id: 6, feature: 'Plagiarism-Free Output', values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '✅', '✅', '❌', '✅'] },
+    { id: 7, feature: 'Fast Processing', values: Array(12).fill('✅') },
+    { id: 8, feature: 'User-Friendly Interface', values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '❌', '✅', '✅'] },
+    { id: 9, feature: 'Data Security', values: ['✅', '❌', '❌', '❌', '❌', '❌', '❌', '❌', '❌', '✅', '❌', '❌'] },
+    { id: 10, feature: 'Free Demo Available', values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '✅', '✅', '❌', '✅'] },
   ];
   
   return (
@@ -95,9 +123,11 @@ const SeoContent: React.FC = () => {
         <section className="space-y-6">
           <h2 className="text-3xl font-bold mb-6">How Does Abify Work?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {steps.map((step, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                <div className="text-xl font-bold mb-3 text-blue-600">{index + 1}. {step.title}</div>
+            {steps.map((step) => (
+              <div key={step.id} className="bg-white p-6 rounded-lg shadow-md">
+                <div className="text-xl font-bold mb-3 text-blue-600">
+                  {step.id}. {step.title}
+                </div>
                 <p className="text-gray-700">{step.description}</p>
               </div>
             ))}
@@ -123,9 +153,9 @@ const SeoContent: React.FC = () => {
 
         {/* Testimonials Section */}
         <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-              <p className="text-gray-700 mb-4">"{testimonial.quote}"</p>
+          {testimonials.map((testimonial) => (
+            <div key={testimonial.id} className="bg-white p-6 rounded-lg shadow-md">
+              <p className="text-gray-700 mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
               <div className="text-gray-900 font-medium">
                 - {testimonial.author}, <span className="text-gray-600">{testimonial.role}</span>
               </div>
@@ -134,7 +164,7 @@ const SeoContent: React.FC = () => {
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-3xl font-bold mb-6">Abify vs Other AI Humanizers</h2>
+          <h2 className="text-3xl font-bold mb-6">6. Порівняння з конкурентами (Comparison Table)</h2>
           <div className="overflow-x-auto shadow-md rounded-lg">
             <table className="w-full border-collapse bg-white">
               <thead>
@@ -155,22 +185,11 @@ const SeoContent: React.FC = () => {
                 </tr>
               </thead>
               <tbody>
-                {[
-                  { feature: 'Humanize AI Content', values: Array(12).fill('✅') },
-                  { feature: 'Bypass AI Detectors', values: Array(12).fill('✅') },
-                  { feature: 'SEO Optimization', values: ['✅', '❌', '❌', '❌', '✅', '❌', '❌', '❌', '❌', '❌', '✅', '❌'] },
-                  { feature: 'Customizable Tones & Styles', values: ['✅', '❌', '✅', '❌', '✅', '❌', '❌', '❌', '✅', '✅', '❌', '✅'] },
-                  { feature: 'Multilingual Support', values: ['✅', '❌', '❌', '❌', '✅', '❌', '❌', '❌', '❌', '❌', '❌', '❌'] },
-                  { feature: 'Plagiarism-Free Output', values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '✅', '✅', '❌', '✅'] },
-                  { feature: 'Fast Processing', values: Array(12).fill('✅') },
-                  { feature: 'User-Friendly Interface', values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '❌', '✅', '✅'] },
-                  { feature: 'Data Security', values: ['✅', '❌', '❌', '❌', '❌', '❌', '❌', '❌', '❌', '✅', '❌', '❌'] },
-                  { feature: 'Free Demo Available', values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '✅', '✅', '❌', '✅'] }
-                ].map((row, index) => (
-                  <tr key={index} className="hover:bg-gray-50">
+                {tableData.map((row) => (
+                  <tr key={row.id} className="hover:bg-gray-50">
                     <td className="border border-gray-200 p-3 font-medium">{row.feature}</td>
                     {row.values.map((value, i) => (
-                      <td key={i} className="border border-gray-200 p-3 text-center">
+                      <td key={`${row.id}-${i}`} className="border border-gray-200 p-3 text-center">
                         {value}
                       </td>
                     ))}
