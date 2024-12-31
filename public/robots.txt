@@ -10,4 +10,4 @@ User-agent: MSNBot/Bingbot
 Disallow: /articles
 Disallow: /*?utm_source=
 
-Sitemap: https://abify.org/sitemap.xml
+Sitemap: https://humanizemyai.com/sitemap.xml
