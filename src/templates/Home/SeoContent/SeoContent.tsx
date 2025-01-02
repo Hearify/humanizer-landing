@@ -2,6 +2,25 @@ import React from 'react';
 
 import styles from './SeoContent.module.scss';
 
+interface Testimonial {
+  id: number;
+  quote: string;
+  author: string;
+  role: string;
+}
+
+interface Step {
+  id: number;
+  title: string;
+  description: string;
+}
+
+interface TableRow {
+  id: number;
+  feature: string;
+  values: Record<string, string>;
+}
+
 const SeoContent: React.FC = () => {
   const testimonials = [
     {
@@ -72,22 +91,22 @@ const competitors = [
     'HumanizeAIText.ai', 'WriteHuman.ai', 'Humanizer.org', 'Phrasly.ai',
     'BypassAI.ai', 'StealthWriter.ai', 'Undetectable.ai', 'JustDone.ai'
   ];
-  
-const tableData = [
+
+const tableData: TableRow[] = [
   {
     id: 1,
     feature: 'Humanize AI Content',
-    values: competitors.reduce((acc, comp) => ({ ...acc, [comp]: '✅' }), {})
+    values: competitors.reduce<Record<string, string>>((acc, comp) => ({ ...acc, [comp]: '✅' }), {})
   },
   {
     id: 2,
     feature: 'Bypass AI Detectors',
-    values: competitors.reduce((acc, comp) => ({ ...acc, [comp]: '✅' }), {})
+    values: competitors.reduce<Record<string, string>>((acc, comp) => ({ ...acc, [comp]: '✅' }), {})
   },
   {
     id: 3,
     feature: 'SEO Optimization',
-    values: competitors.reduce((acc, comp, index) => ({
+    values: competitors.reduce<Record<string, string>>((acc, comp) => ({
       ...acc,
       [comp]: ['Abify', 'AIHumanize.io', 'StealthWriter.ai'].includes(comp) ? '✅' : '❌'
     }), {})
@@ -95,7 +114,7 @@ const tableData = [
   {
     id: 4,
     feature: 'Customizable Tones & Styles',
-    values: competitors.reduce((acc, comp) => ({
+    values: competitors.reduce<Record<string, string>>((acc, comp) => ({
       ...acc,
       [comp]: ['Abify', 'HumanizeAI.io', 'AIHumanize.io', 'Phrasly.ai', 'BypassAI.ai', 'JustDone.ai'].includes(comp) ? '✅' : '❌'
     }), {})
@@ -103,7 +122,7 @@ const tableData = [
   {
     id: 5,
     feature: 'Multilingual Support',
-    values: competitors.reduce((acc, comp) => ({
+    values: competitors.reduce<Record<string, string>>((acc, comp) => ({
       ...acc,
       [comp]: ['Abify', 'AIHumanize.io'].includes(comp) ? '✅' : '❌'
     }), {})
@@ -111,7 +130,7 @@ const tableData = [
   {
     id: 6,
     feature: 'Plagiarism-Free Output',
-    values: competitors.reduce((acc, comp) => ({
+    values: competitors.reduce<Record<string, string>>((acc, comp) => ({
       ...acc,
       [comp]: !['Humanizer.org', 'StealthWriter.ai'].includes(comp) ? '✅' : '❌'
     }), {})
@@ -119,12 +138,12 @@ const tableData = [
   {
     id: 7,
     feature: 'Fast Processing',
-    values: competitors.reduce((acc, comp) => ({ ...acc, [comp]: '✅' }), {})
+    values: competitors.reduce<Record<string, string>>((acc, comp) => ({ ...acc, [comp]: '✅' }), {})
   },
   {
     id: 8,
     feature: 'User-Friendly Interface',
-    values: competitors.reduce((acc, comp) => ({
+    values: competitors.reduce<Record<string, string>>((acc, comp) => ({
       ...acc,
       [comp]: !['Phrasly.ai', 'BypassAI.ai'].includes(comp) ? '✅' : '❌'
     }), {})
@@ -132,7 +151,7 @@ const tableData = [
   {
     id: 9,
     feature: 'Data Security',
-    values: competitors.reduce((acc, comp) => ({
+    values: competitors.reduce<Record<string, string>>((acc, comp) => ({
       ...acc,
       [comp]: ['Abify', 'BypassAI.ai'].includes(comp) ? '✅' : '❌'
     }), {})
@@ -140,7 +159,7 @@ const tableData = [
   {
     id: 10,
     feature: 'Free Demo Available',
-    values: competitors.reduce((acc, comp) => ({
+    values: competitors.reduce<Record<string, string>>((acc, comp) => ({
       ...acc,
       [comp]: !['Humanizer.org', 'StealthWriter.ai'].includes(comp) ? '✅' : '❌'
     }), {})
