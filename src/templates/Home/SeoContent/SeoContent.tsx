@@ -2,18 +2,18 @@ import React from 'react';
 
 import styles from './SeoContent.module.scss';
 
-interface Testimonial {
-  id: number;
-  quote: string;
-  author: string;
-  role: string;
-}
+// interface Testimonial {
+//   id: number;
+//   quote: string;
+//   author: string;
+//   role: string;
+// }
 
-interface Step {
-  id: number;
-  title: string;
-  description: string;
-}
+// interface Step {
+//   id: number;
+//   title: string;
+//   description: string;
+// }
 
 interface TableRow {
   id: number;
