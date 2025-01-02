@@ -67,46 +67,80 @@ const SeoContent: React.FC = () => {
     },
   ];
 
-  const tableData = [
-    { id: 1, feature: 'Humanize AI Content', values: Array(12).fill('✅') },
-    { id: 2, feature: 'Bypass AI Detectors', values: Array(12).fill('✅') },
-    {
-      id: 3,
-      feature: 'SEO Optimization',
-      values: ['✅', '❌', '❌', '❌', '✅', '❌', '❌', '❌', '❌', '❌', '✅', '❌'],
-    },
-    {
-      id: 4,
-      feature: 'Customizable Tones & Styles',
-      values: ['✅', '❌', '✅', '❌', '✅', '❌', '❌', '❌', '✅', '✅', '❌', '✅'],
-    },
-    {
-      id: 5,
-      feature: 'Multilingual Support',
-      values: ['✅', '❌', '❌', '❌', '✅', '❌', '❌', '❌', '❌', '❌', '❌', '❌'],
-    },
-    {
-      id: 6,
-      feature: 'Plagiarism-Free Output',
-      values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '✅', '✅', '❌', '✅'],
-    },
-    { id: 7, feature: 'Fast Processing', values: Array(12).fill('✅') },
-    {
-      id: 8,
-      feature: 'User-Friendly Interface',
-      values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '❌', '✅', '✅'],
-    },
-    {
-      id: 9,
-      feature: 'Data Security',
-      values: ['✅', '❌', '❌', '❌', '❌', '❌', '❌', '❌', '❌', '✅', '❌', '❌'],
-    },
-    {
-      id: 10,
-      feature: 'Free Demo Available',
-      values: ['✅', '✅', '✅', '✅', '✅', '✅', '✅', '❌', '✅', '✅', '❌', '✅'],
-    },
-  ];
+  
+const tableData = [
+  {
+    id: 1,
+    feature: 'Humanize AI Content',
+    values: competitors.reduce((acc, comp) => ({ ...acc, [comp]: '✅' }), {})
+  },
+  {
+    id: 2,
+    feature: 'Bypass AI Detectors',
+    values: competitors.reduce((acc, comp) => ({ ...acc, [comp]: '✅' }), {})
+  },
+  {
+    id: 3,
+    feature: 'SEO Optimization',
+    values: competitors.reduce((acc, comp, index) => ({
+      ...acc,
+      [comp]: ['Abify', 'AIHumanize.io', 'StealthWriter.ai'].includes(comp) ? '✅' : '❌'
+    }), {})
+  },
+  {
+    id: 4,
+    feature: 'Customizable Tones & Styles',
+    values: competitors.reduce((acc, comp) => ({
+      ...acc,
+      [comp]: ['Abify', 'HumanizeAI.io', 'AIHumanize.io', 'Phrasly.ai', 'BypassAI.ai', 'JustDone.ai'].includes(comp) ? '✅' : '❌'
+    }), {})
+  },
+  {
+    id: 5,
+    feature: 'Multilingual Support',
+    values: competitors.reduce((acc, comp) => ({
+      ...acc,
+      [comp]: ['Abify', 'AIHumanize.io'].includes(comp) ? '✅' : '❌'
+    }), {})
+  },
+  {
+    id: 6,
+    feature: 'Plagiarism-Free Output',
+    values: competitors.reduce((acc, comp) => ({
+      ...acc,
+      [comp]: !['Humanizer.org', 'StealthWriter.ai'].includes(comp) ? '✅' : '❌'
+    }), {})
+  },
+  {
+    id: 7,
+    feature: 'Fast Processing',
+    values: competitors.reduce((acc, comp) => ({ ...acc, [comp]: '✅' }), {})
+  },
+  {
+    id: 8,
+    feature: 'User-Friendly Interface',
+    values: competitors.reduce((acc, comp) => ({
+      ...acc,
+      [comp]: !['Phrasly.ai', 'BypassAI.ai'].includes(comp) ? '✅' : '❌'
+    }), {})
+  },
+  {
+    id: 9,
+    feature: 'Data Security',
+    values: competitors.reduce((acc, comp) => ({
+      ...acc,
+      [comp]: ['Abify', 'BypassAI.ai'].includes(comp) ? '✅' : '❌'
+    }), {})
+  },
+  {
+    id: 10,
+    feature: 'Free Demo Available',
+    values: competitors.reduce((acc, comp) => ({
+      ...acc,
+      [comp]: !['Humanizer.org', 'StealthWriter.ai'].includes(comp) ? '✅' : '❌'
+    }), {})
+  }
+];
 
   return (
     <div className={styles.wrapper}>
@@ -195,46 +229,38 @@ const SeoContent: React.FC = () => {
         </section>
 
 
-
 <section className="space-y-6">
-  <h2 className="text-3xl font-bold mb-6">Abify vs Other AI Humanizers</h2>
-  <div className="overflow-x-auto shadow-md rounded-lg">
-    <table className="w-full border-collapse bg-white">
-      <thead>
-        <tr className="bg-gray-50">
-          <th className="border border-gray-200 p-3 text-left font-semibold">Function</th>
-          <th className="border border-gray-200 p-3 text-center font-semibold">Abify</th>
-          <th className="border border-gray-200 p-3 text-center font-semibold">HumanizeAI.pro</th>
-          <th className="border border-gray-200 p-3 text-center font-semibold">HumanizeAI.io</th>
-          <th className="border border-gray-200 p-3 text-center font-semibold">AIHumanize.io</th>
-          <th className="border border-gray-200 p-3 text-center font-semibold">HumanizeAIText.ai</th>
-          <th className="border border-gray-200 p-3 text-center font-semibold">WriteHuman.ai</th>
-          <th className="border border-gray-200 p-3 text-center font-semibold">Humanizer.org</th>
-          <th className="border border-gray-200 p-3 text-center font-semibold">Phrasly.ai</th>
-          <th className="border border-gray-200 p-3 text-center font-semibold">BypassAI.ai</th>
-          <th className="border border-gray-200 p-3 text-center font-semibold">StealthWriter.ai</th>
-          <th className="border border-gray-200 p-3 text-center font-semibold">Undetectable.ai</th>
-          <th className="border border-gray-200 p-3 text-center font-semibold">JustDone.ai</th>
-        </tr>
-      </thead>
-      <tbody>
-        {tableData.map(row => (
-          <tr key={row.id} className="hover:bg-gray-50">
-            <td className="border border-gray-200 p-3 font-medium">{row.feature}</td>
-            {row.values.map((value, index) => (
-              <td 
-                key={`${row.id}-${row.feature}-${index}`} 
-                className="border border-gray-200 p-3 text-center"
-              >
-                {value}
-              </td>
+    <h2 className="text-3xl font-bold mb-6">Abify vs Other AI Humanizers</h2>
+    <div className="overflow-x-auto shadow-md rounded-lg">
+      <table className="w-full border-collapse bg-white">
+        <thead>
+          <tr className="bg-gray-50">
+            <th className="border border-gray-200 p-3 text-left font-semibold">Function</th>
+            {competitors.map(competitor => (
+              <th key={competitor} className="border border-gray-200 p-3 text-center font-semibold">
+                {competitor}
+              </th>
             ))}
           </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-</section>
+        </thead>
+        <tbody>
+          {tableData.map(row => (
+            <tr key={row.id} className="hover:bg-gray-50">
+              <td className="border border-gray-200 p-3 font-medium">{row.feature}</td>
+              {competitors.map(competitor => (
+                <td 
+                  key={`${row.id}-${competitor}`}
+                  className="border border-gray-200 p-3 text-center"
+                >
+                  {row.values[competitor]}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
 
 
         <section className={styles.body}>
