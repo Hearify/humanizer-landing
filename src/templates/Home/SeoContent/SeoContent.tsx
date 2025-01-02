@@ -67,6 +67,11 @@ const SeoContent: React.FC = () => {
     },
   ];
 
+const competitors = [
+    'Abify', 'HumanizeAI.pro', 'HumanizeAI.io', 'AIHumanize.io', 
+    'HumanizeAIText.ai', 'WriteHuman.ai', 'Humanizer.org', 'Phrasly.ai',
+    'BypassAI.ai', 'StealthWriter.ai', 'Undetectable.ai', 'JustDone.ai'
+  ];
   
 const tableData = [
   {
