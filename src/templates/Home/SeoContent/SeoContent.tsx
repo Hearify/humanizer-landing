@@ -195,6 +195,7 @@ const SeoContent: React.FC = () => {
         </section>
 
 
+
 <section className="space-y-6">
   <h2 className="text-3xl font-bold mb-6">Abify vs Other AI Humanizers</h2>
   <div className="overflow-x-auto shadow-md rounded-lg">
@@ -221,10 +222,15 @@ const SeoContent: React.FC = () => {
           <tr key={row.id} className="hover:bg-gray-50">
             <td className="border border-gray-200 p-3 font-medium">{row.feature}</td>
             {row.values.map((value, index) => (
-              <td key={`${row.id}-${value}-${index}`} className="border border-gray-200 p-3 text-center">
+              <td 
+                key={`${row.id}-${row.feature}-${index}`} 
+                className="border border-gray-200 p-3 text-center"
+              >
                 {value}
               </td>
-          ))}
+            ))}
+          </tr>
+        ))}
       </tbody>
     </table>
   </div>
