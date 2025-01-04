@@ -1,6 +1,8 @@
 import React, { useState, useEffect, forwardRef } from 'react';
+
 import AppSelectItem from '../AppSelectItem/AppSelectItem';
 import styles from './AppSelectDropdown.module.scss';
+
 import type { AppSelectOption } from '../AppSelect';
 
 export type AppSelectDropdownProps<T extends string = string> = {
@@ -12,7 +14,7 @@ export type AppSelectDropdownProps<T extends string = string> = {
 
 const AppSelectDropdown = forwardRef(function AppSelectDropdown<T extends string>(
   { value, options, onSelect, onClose }: AppSelectDropdownProps<T>,
-  ref: React.Ref<HTMLDivElement>
+  ref: React.Ref<HTMLDivElement>,
 ) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -56,8 +58,6 @@ const AppSelectDropdown = forwardRef(function AppSelectDropdown<T extends string
       {options.length === 0 && <AppSelectItem item={{ id: '', title: 'No options found' }} readonly />}
     </div>
   );
-}) as <T extends string>(
-  props: AppSelectDropdownProps<T> & { ref?: React.Ref<HTMLDivElement> }
-) => JSX.Element;
+}) as <T extends string>(props: AppSelectDropdownProps<T> & { ref?: React.Ref<HTMLDivElement> }) => JSX.Element;
 
 export default AppSelectDropdown;
