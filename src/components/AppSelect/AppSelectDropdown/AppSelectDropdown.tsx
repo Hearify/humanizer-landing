@@ -12,7 +12,7 @@ export type AppSelectDropdownProps<T extends string = string> = {
   onClose: () => void;
 };
 
-const AppSelectDropdown = forwardRef<HTMLDivElement, AppSelectDropdownProps<any>>(
+const AppSelectDropdown = forwardRef<HTMLDivElement, AppSelectDropdownProps<T>>(
   <T extends string>(
     { value, options, onSelect, onClose }: AppSelectDropdownProps<T>,
     ref: React.Ref<HTMLDivElement>,
