@@ -1,8 +1,6 @@
 import React, { useState, useEffect, forwardRef } from 'react';
-
 import AppSelectItem from '../AppSelectItem/AppSelectItem';
 import styles from './AppSelectDropdown.module.scss';
-
 import type { AppSelectOption } from '../AppSelect';
 
 export type AppSelectDropdownProps<T extends string = string> = {
@@ -12,11 +10,8 @@ export type AppSelectDropdownProps<T extends string = string> = {
   onClose: () => void;
 };
 
-const AppSelectDropdown = forwardRef<HTMLDivElement, AppSelectDropdownProps<T>>(
-  <T extends string>(
-    { value, options, onSelect, onClose }: AppSelectDropdownProps<T>,
-    ref: React.Ref<HTMLDivElement>,
-  ) => {
+const AppSelectDropdown = <T extends string>() => forwardRef<HTMLDivElement, AppSelectDropdownProps<T>>(
+  ({ value, options, onSelect, onClose }: AppSelectDropdownProps<T>, ref: React.Ref<HTMLDivElement>) => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     const handleClick = (id: T): void => {
@@ -56,11 +51,10 @@ const AppSelectDropdown = forwardRef<HTMLDivElement, AppSelectDropdownProps<T>>(
             onClick={() => handleClick(item.id)}
           />
         ))}
-
         {options.length === 0 && <AppSelectItem item={{ id: '', title: 'No options found' }} readonly />}
       </div>
     );
-  },
+  }
 );
 
 AppSelectDropdown.displayName = 'AppSelectDropdown';
