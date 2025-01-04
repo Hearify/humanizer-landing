@@ -37,7 +37,7 @@ const PageHeader: React.FC = () => {
       <div className={styles.container}>
         <div className={isDeviceLarge ? styles.navigation : styles.phone_navigation}>
           <div className={styles.logo_container}>
-            <Link rel="stylesheet" href="/">
+            <Link rel="stylesheet" onClick={closeMenu} href="/#humanize_section">
               <AbifyLogo width={96} height={32} alt="Logo" />
             </Link>
           </div>
@@ -49,9 +49,9 @@ const PageHeader: React.FC = () => {
             <>
               <div className={styles['burger-wrapper']}>
                 {!isDeviceSmall && (
-                  <button type="button" className={styles['humanize-btn']}>
+                  <Link href="/#humanize_section" className={styles['humanize-btn']}>
                     TRY A LIVE DEMO
-                  </button>
+                  </Link>
                 )}
                 <button
                   type="button"
@@ -69,9 +69,9 @@ const PageHeader: React.FC = () => {
                   <div className={styles.drawerContent}>
                     <NavLinks closeMenu={closeMenu} />
                     {isDeviceSmall && (
-                      <button type="button" className={styles['humanize-btn']}>
+                      <Link href="/#humanize_section" className={styles['humanize-btn']}>
                         TRY A LIVE DEMO
-                      </button>
+                      </Link>
                     )}
                   </div>
                 </div>
@@ -81,9 +81,9 @@ const PageHeader: React.FC = () => {
           )}
         </div>
         {isDeviceLarge && (
-          <button type="button" className={styles['humanize-btn']}>
+          <Link href="/#humanize_section" className={styles['humanize-btn']}>
             TRY A LIVE DEMO
-          </button>
+          </Link>
         )}
       </div>
     </div>

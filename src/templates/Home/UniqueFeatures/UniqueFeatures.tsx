@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 import styles from './UniqueFeatures.module.scss';
 import HumanizeIcon from '@/assets/icons/humanize-icon.svg';
@@ -110,9 +111,9 @@ const UniqueFeatures = () => {
         </div>
         <div className={styles['button-container']}>
           <div className={styles.subtitle}>Discover all the features of Abify today!</div>
-          <button className={styles['humanize-btn']} type="button">
+          <Link href="#humanize_section" className={styles['humanize-btn']}>
             TRY A LIVE DEMO
-          </button>
+          </Link>
         </div>
       </div>
     </div>

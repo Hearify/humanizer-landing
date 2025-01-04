@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import { CSSTransition } from 'react-transition-group';
 import cn from 'classnames';
@@ -43,6 +43,7 @@ function AppSelect<T extends string>({
   const isInputTouched: boolean = touched === undefined || touched;
   const errorMessage: string = isInputTouched && error ? error : '';
   const helperText: string = errorMessage || note || '';
+  const AppSelectDropdownRef = useRef(null);
 
   const className = cn(
     styles.AppSelect__wrapper,
@@ -87,8 +88,15 @@ function AppSelect<T extends string>({
           className={cn(styles.AppSelect__icon, { [styles['AppSelect__icon--active']]: isOpened })}
         />
 
-        <CSSTransition in={isOpened} timeout={300} classNames="AppSelectDropdown" unmountOnExit>
+        <CSSTransition
+          in={isOpened}
+          timeout={300}
+          classNames="AppSelectDropdown"
+          unmountOnExit
+          nodeRef={AppSelectDropdownRef}
+        >
           <AppSelectDropdown //
+            ref={AppSelectDropdownRef}
             value={value}
             options={options}
             onSelect={onSelect}
