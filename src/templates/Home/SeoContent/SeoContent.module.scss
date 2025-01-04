@@ -5,7 +5,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-nunito), sans-serif;}
+  font-family: var(--font-nunito), sans-serif;
+}
 
 .container {
   display: flex;
@@ -66,3 +67,167 @@
   font-style: italic;
 }
 
+.comparisonSection {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.comparisonTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.comparisonTableContainer {
+  overflow-x: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.comparisonTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+.comparisonHeaderRow {
+  background-color: #f9fafb;
+}
+
+.comparisonHeaderCell {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.comparisonDataRow {
+  &:hover {
+    background-color: #f9fafb;
+  }
+}
+
+.comparisonDataCell {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+
+  &.featureCell {
+    font-weight: 500;
+  }
+
+  &.textCenter {
+    text-align: center;
+  }
+}
+
+.testimonialsGrid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include md {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.testimonialCard {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonialQuote {
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.testimonialAuthor {
+  color: #1a202c;
+  font-weight: 500;
+}
+
+.testimonialRole {
+  color: #718096;
+}
+
+.howDoesAbifySection {
+  margin-bottom: 1.5rem;
+}
+
+.howDoesAbifyHeading {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+
+  @include md {
+    font-size: 1.5rem;
+  }
+}
+
+.howDoesAbifyGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.howDoesAbifyGridSmall {
+  grid-template-columns: repeat(2, 1fr);
+
+  @include md  {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.howDoesAbifyGridLarge {
+  grid-template-columns: repeat(4, 1fr);
+
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include sm {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.howDoesAbifyCard {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include md {
+    padding: 1rem;
+  }
+}
+
+.howDoesAbifyCardTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: var(--general-black);
+  text-align: center;
+
+  @include md {
+    font-size: 1.125rem;
+  }
+}
+
+.howDoesAbifyCardDescription {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+
+  @include md {
+    font-size: 0.875rem;
+  }
+}
