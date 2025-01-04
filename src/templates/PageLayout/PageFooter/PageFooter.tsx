@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 import styles from './PageFooter.module.scss';
 import AbifyFooterLogo from '@/assets/images/footer_logo.svg';
@@ -8,7 +9,9 @@ const PageFooter: React.FC = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        <AbifyFooterLogo width={96} height={32} alt="Logo" />
+        <Link href="/#humanize_section">
+          <AbifyFooterLogo width={96} height={32} alt="Logo" />
+        </Link>
         <div className={styles.navigation}>
           <nav className={styles.links}>
             <NavLinks />

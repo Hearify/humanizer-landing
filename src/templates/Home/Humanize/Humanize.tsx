@@ -136,7 +136,7 @@ const Humanize: React.FC = () => {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div id="humanize_section" className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.title}>
