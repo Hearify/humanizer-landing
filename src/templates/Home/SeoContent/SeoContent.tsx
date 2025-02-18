@@ -47,32 +47,6 @@ const SeoContent: React.FC = () => {
     },
   ];
 
-  const steps = [
-    {
-      id: 1,
-      title: 'Input Your AI-Generated Text',
-      description: 'Upload your AI-generated content into our easy-to-use platform.',
-    },
-    {
-      id: 2,
-      title: 'Choose Your Tone & Preferences',
-      description:
-        "Select the tone and style that best fits your needs, whether it's conversational, professional, or creative.",
-    },
-    {
-      id: 3,
-      title: 'Abify Does the Rest',
-      description:
-        'Our advanced AI technology works its magic, rewriting and transforming your text to sound natural and undetectable.',
-    },
-    {
-      id: 4,
-      title: 'Export & Use',
-      description:
-        "Once your content is humanized, it's ready to publish or share—no more awkward or robotic sentences.",
-    },
-  ];
-
   const competitors = [
     'Abify',
     'HumanizeAI.pro',
@@ -225,21 +199,6 @@ const SeoContent: React.FC = () => {
             Quickly create high-quality content for pitch decks, presentations, or investor materials. Provide text that
             sounds convincing and reflects your idea clearly and professionally.
           </p>
-        </section>
-
-        {/* How Does Abify Work Section */}
-        <section className={styles.howDoesAbifySection}>
-          <h2 className={styles.howDoesAbifyHeading}>How Does Abify Work?</h2>
-          <div className={`${styles.howDoesAbifyGrid} ${styles.howDoesAbifyGridSmall} ${styles.howDoesAbifyGridLarge}`}>
-            {steps.map(step => (
-              <div key={step.id} className={styles.howDoesAbifyCard}>
-                <div className={styles.howDoesAbifyCardTitle}>
-                  {step.id}. {step.title}
-                </div>
-                <p className={styles.howDoesAbifyCardDescription}>{step.description}</p>
-              </div>
-            ))}
-          </div>
         </section>
 
         <section className={styles.body}>
