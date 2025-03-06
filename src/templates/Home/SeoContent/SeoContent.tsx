@@ -163,45 +163,6 @@ const SeoContent: React.FC = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <section className={styles.body}>
-          <h2 className={styles.title}>Abify Use Cases</h2>
-          <p className={styles.label}>Bloggers and content creators</p>
-          <p className={styles.text}>
-            Write articles, blogs, or posts for social media faster, with the confidence that the text sounds natural.
-            Your audience will be interested, and your content will always be unique and relevant.
-          </p>
-          <p className={styles.label}>Marketers</p>
-          <p className={styles.text}>
-            Create marketing materials that emotionally impact, increase engagement, and improve conversions. Abify is
-            ideal for advertising copy, newsletters, and landing pages.
-          </p>
-          <p className={styles.label}>Students and researchers</p>
-          <p className={styles.text}>
-            Transform academic texts into professionally written materials that pass plagiarism checks and look
-            authentic. Ideal for essays, term papers, and research projects.
-          </p>
-          <p className={styles.label}>Business and brands</p>
-          <p className={styles.text}>
-            Automate the creation of professional texts for your website, emails, or advertising campaigns. Abify
-            empowers your team to write human AI content that maintains your brand’s voice and quality.
-          </p>
-          <p className={styles.label}>Digital agencies</p>
-          <p className={styles.text}>
-            Save time and resources by processing large numbers of texts in seconds. Abify allows agencies to create
-            high-quality content for different clients in any style or tone.
-          </p>
-          <p className={styles.label}>Translators</p>
-          <p className={styles.text}>
-            Make the text not only translated but also adapted to the cultural context. Abify helps you avoid literal
-            mistakes and creates content that sounds natural in any language.
-          </p>
-          <p className={styles.label}>Startups</p>
-          <p className={styles.text}>
-            Quickly create high-quality content for pitch decks, presentations, or investor materials. Provide text that
-            sounds convincing and reflects your idea clearly and professionally.
-          </p>
-        </section>
-
-        <section className={styles.body}>
           <h2 className={styles.title}>Humanize Beyond Detection: Abify Provides Original and Authentic Writing</h2>
           <p className={styles.text}>
             Abify doesnt just bypass AI detectors - its designed to make your content unique and original. Our advanced
