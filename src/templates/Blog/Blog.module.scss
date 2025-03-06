@@ -9,12 +9,10 @@
   width: 100%;
   height: auto;
   padding: 96px 0 64px 0;
-  background-image:
-          linear-gradient(to top, #ffffff, rgba(0, 0, 0, 0) 50%),
-          url('~../../../public/humanize_bg.png');
+  background-image: linear-gradient(to top, #ffffff, rgba(0, 0, 0, 0) 50%), url('~../../../public/humanize_bg.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: top ;
+  background-position: top;
 
   @include lg {
     padding: 88px 0 64px 0;
@@ -23,7 +21,7 @@
   @include md {
     background-size: revert;
     background-repeat: no-repeat;
-    background-position: top ;
+    background-position: top;
   }
 }
 
@@ -34,7 +32,7 @@
   align-items: center;
   justify-content: center;
   gap: 28px;
-  color: var(--white, #FFFFFF);
+  color: var(--white, #ffffff);
 
   @include lg {
     width: 900px;
@@ -131,8 +129,8 @@
   font-size: 14px;
   font-weight: 600;
   padding: 12px 16px;
-  color: var(--general-white, #FEFDFF);
-  background-color: var(--brand-purpe-400, #6444F4);
+  color: var(--general-white, #fefdff);
+  background-color: var(--brand-purpe-400, #6444f4);
   border-radius: 6px;
 
   @include sm {

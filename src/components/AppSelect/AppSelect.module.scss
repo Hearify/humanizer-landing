@@ -1,4 +1,4 @@
-@use "src/styles/helpers" as *;
+@use 'src/styles/helpers' as *;
 
 .AppSelect {
   width: 100%;
@@ -19,7 +19,7 @@
     background-color: transparent;
   }
 
-  &:hover{
+  &:hover {
     border: 1px solid var(--neural-500) !important;
   }
 
@@ -58,7 +58,7 @@
     @include text-field-sm;
     padding: 9px 20px 9px 8px !important;
 
-    +.AppSelect__icon {
+    + .AppSelect__icon {
       right: 8px;
     }
   }
@@ -72,7 +72,7 @@
     @include text-field-lg;
     padding: 13px 11px 13px 11px !important;
 
-    +.AppSelect__icon {
+    + .AppSelect__icon {
       top: 16px;
     }
   }

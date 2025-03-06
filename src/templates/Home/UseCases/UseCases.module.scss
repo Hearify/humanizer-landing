@@ -1,4 +1,4 @@
-@use "/src/styles/helpers" as *;
+@use '/src/styles/helpers' as *;
 
 .wrapper {
   display: flex;
@@ -17,7 +17,7 @@
   }
 }
 
-.container{
+.container {
   width: 1200px;
   display: flex;
   flex-direction: column;

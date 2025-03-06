@@ -1,4 +1,4 @@
-@use "/src/styles/helpers" as *;
+@use '/src/styles/helpers' as *;
 
 .wrapper {
   display: flex;
@@ -10,9 +10,7 @@
   height: auto;
   min-height: 100vh;
   padding: 120px 0 60px 0;
-  background-image:
-          linear-gradient(to top, #ffffff, rgba(0, 0, 0, 0) 50%),
-          url('~../../../../public/humanize_bg.png');
+  background-image: linear-gradient(to top, #ffffff, rgba(0, 0, 0, 0) 50%), url('~../../../../public/humanize_bg.png');
   background-size: 100% 900px;
   background-repeat: no-repeat;
   background-position: top;
@@ -37,7 +35,7 @@
   align-items: flex-start;
   justify-content: center;
   gap: 28px;
-  color: var(--white, #FFFFFF);
+  color: var(--white, #ffffff);
 
   @include lg {
     width: 900px;
@@ -94,7 +92,6 @@
   background-color: var(--general-white);
   margin-left: 8px;
   color: var(--general-black);
-
 }
 
 .author-description {
@@ -141,7 +138,7 @@
   padding: 16px 20px;
   border-radius: 12px;
   gap: 16px;
-  background-color: #FEFDFFB2;
+  background-color: #fefdffb2;
   color: var(--general-black);
   z-index: 1000;
 
@@ -178,7 +175,7 @@
   padding: 16px 20px;
   border-radius: 12px;
   gap: 16px;
-  background-color: #FEFDFFB2;
+  background-color: #fefdffb2;
   color: var(--general-black);
 
   .title {
@@ -343,8 +340,8 @@
   font-size: 14px;
   font-weight: 600;
   padding: 12px 16px;
-  color: var(--general-white, #FEFDFF);
-  background-color: var(--brand-purpe-400, #6444F4);
+  color: var(--general-white, #fefdff);
+  background-color: var(--brand-purpe-400, #6444f4);
   border-radius: 6px;
 
   @include sm {
