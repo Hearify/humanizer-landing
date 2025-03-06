@@ -7,10 +7,10 @@
   font-family: var(--font-nunito), sans-serif;
   width: 100%;
   height: 70px;
-  background-color: var(--general-white, #FEFDFF);
+  background-color: var(--general-white, #fefdff);
   z-index: 1000;
   position: fixed;
-  box-shadow: 0 2px 4px rgba(239, 236, 254, .8);
+  box-shadow: 0 2px 4px rgba(239, 236, 254, 0.8);
 }
 
 .container {
@@ -46,7 +46,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;}
+  width: 100%;
+}
 
 .links {
   display: flex;
@@ -54,12 +55,11 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 21px;
-  color: var(--general-black, #15343A);
+  color: var(--general-black, #15343a);
 
   @include lg {
     gap: 16px;
-
-}
+  }
 
   @include md {
     font-size: 16px;
@@ -74,18 +74,18 @@
 }
 
 .humanize-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 10px 16px;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 20px;
-    background-color: var(--general-white);
-    border: 2px solid var(--brand-purpe-400);
-    border-radius: 8px;
-    color: var(--general-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  background-color: var(--general-white);
+  border: 2px solid var(--brand-purpe-400);
+  border-radius: 8px;
+  color: var(--general-black);
 
   @include lg {
     padding: 10px 12px;
@@ -120,7 +120,6 @@
   }
 }
 
-
 .bar {
   display: block;
   width: 20px;
@@ -147,7 +146,6 @@
     transition: $default-transition;
   }
 }
-
 
 .drawerContent {
   display: flex;

@@ -1,4 +1,4 @@
-@use "src/styles/helpers" as *;
+@use 'src/styles/helpers' as *;
 
 .AppButton {
   display: flex;
@@ -10,9 +10,9 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 150%;
-  border: 2px solid var(--brand-purpe-400, #6444F4);
+  border: 2px solid var(--brand-purpe-400, #6444f4);
   border-radius: 8px;
-  color: var(--general-black, #15343A);
+  color: var(--general-black, #15343a);
 
   &:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -20,8 +20,8 @@
   }
   &:disabled {
     border: none;
-    background-color: var(--neural-100, #F1F5F9);
-    color: var(--neural-400, #94A3B8);
+    background-color: var(--neural-100, #f1f5f9);
+    color: var(--neural-400, #94a3b8);
     cursor: not-allowed;
     &:hover {
       box-shadow: none;
@@ -29,7 +29,7 @@
     }
   }
   &--active {
-    background-color: var(--brand-purpe-400, #6444F4);
-    color: var(--general-white, #FEFDFF);
+    background-color: var(--brand-purpe-400, #6444f4);
+    color: var(--general-white, #fefdff);
   }
 }

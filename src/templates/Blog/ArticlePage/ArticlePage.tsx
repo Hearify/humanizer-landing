@@ -18,7 +18,7 @@ interface ArticlePageProps {
 }
 
 const ArticlePage: React.FC<ArticlePageProps> = ({ id }) => {
-  const { isDeviceLarge, isServer } = useDeviceDetect('md');
+  const { isDeviceLarge } = useDeviceDetect('md');
 
   console.log(id);
   return (

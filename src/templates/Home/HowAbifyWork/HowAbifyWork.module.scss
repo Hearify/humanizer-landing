@@ -99,9 +99,9 @@
 
   @include lg {
     img {
-    width: 140px;
-    height: 140px;
-      }
+      width: 140px;
+      height: 140px;
+    }
   }
 
   @include md {
@@ -166,7 +166,6 @@
   }
 }
 
-
 .tablet-steps-container {
   display: flex;
   flex-direction: column;
@@ -189,7 +188,6 @@
     position: relative;
     left: 30px;
     margin-top: -100px;
-
   }
 }
 

@@ -47,7 +47,7 @@
   width: 100%;
   gap: 24px;
 
-  @include lg{
+  @include lg {
     gap: 16px;
   }
 }
@@ -109,7 +109,7 @@
   line-height: 150%;
 
   @include lg {
-  font-size: 18px;
+    font-size: 18px;
   }
 }
 
@@ -135,8 +135,8 @@
   line-height: 24px;
   font-weight: 600;
   padding: 10px 16px;
-  color: var(--general-white, #FEFDFF);
-  background-color: var(--brand-purpe-400, #6444F4);
+  color: var(--general-white, #fefdff);
+  background-color: var(--brand-purpe-400, #6444f4);
   border-radius: 8px;
 
   &:hover {
