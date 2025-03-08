@@ -38,12 +38,19 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'off',
     'react/function-component-definition': 'off',
     'react/default-props-match-prop-types': 'off',
+    'react/jsx-props-no-spreading': 'error',
     '@typescript-eslint/no-namespace': 'off',
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/no-throw-literal': 'off',
     '@typescript-eslint/no-misused-promises': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/consistent-type-imports': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/no-unused-vars': ['error', {
+      'vars': 'all',
+      'args': 'after-used',
+      'ignoreRestSiblings': true
+    }],
     'react/require-default-props': 'off',
     'import/no-extraneous-dependencies': [
       'error',
@@ -51,6 +58,7 @@ module.exports = {
         devDependencies: true,
       },
     ],
+    'react/no-danger': 'warn',
     'import/order': [
       'error',
       {
