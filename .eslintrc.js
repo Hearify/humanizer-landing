@@ -46,11 +46,14 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/consistent-type-imports': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
-    '@typescript-eslint/no-unused-vars': ['error', {
-      'vars': 'all',
-      'args': 'after-used',
-      'ignoreRestSiblings': true
-    }],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: true,
+      },
+    ],
     'react/require-default-props': 'off',
     'import/no-extraneous-dependencies': [
       'error',

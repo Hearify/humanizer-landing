@@ -15,7 +15,7 @@ export type ArticlePreview = {
   minutesToRead: number;
   coverUrl: string;
   authorSlug: string;
-  editorSlug: string;
+  editorSlug?: string;
   faq?: FAQItem[];
   meta?: Record<string, string>;
 };
@@ -31,7 +31,7 @@ export type Article = {
   minutesToRead: number;
   faq?: FAQItem[];
   author: Author;
-  editor: Author;
+  editor?: Author;
   suggestions: ArticlePreview[];
   meta?: Record<string, string>;
 };

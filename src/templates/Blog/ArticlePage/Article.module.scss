@@ -61,6 +61,15 @@
   font-weight: 400;
   line-height: 21px;
   margin-bottom: 24px;
+
+  a {
+    color: var(--white);
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--brand-purpe-400);
+    }
+  }
 }
 
 .authors {

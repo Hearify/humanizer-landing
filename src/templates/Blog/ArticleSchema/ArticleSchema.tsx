@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import DOMPurify from 'dompurify';
+import DOMPurify from 'isomorphic-dompurify';
 
 import type { Article } from '@/types/article';
 
@@ -9,24 +9,30 @@ type ArticleSchemaProps = {
 };
 
 const ArticleSchema: React.FC<ArticleSchemaProps> = ({ article }) => {
+  const authors = [
+    {
+      '@type': 'Person',
+      name: article.author.name,
+      url: article.author.linkedInUrl,
+    },
+  ];
+
+  // Add editor to authors array only if editor exists
+  if (article.editor) {
+    authors.push({
+      '@type': 'Person',
+      name: article.editor.name,
+      url: article.editor.linkedInUrl,
+    });
+  }
+
   const schemaData = {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
     headline: article.title,
     image: article.coverUrl,
     datePublished: article.date,
-    author: [
-      {
-        '@type': 'Person',
-        name: article.author.name,
-        url: article.author.linkedInUrl,
-      },
-      {
-        '@type': 'Person',
-        name: article.editor.name,
-        url: article.editor.linkedInUrl,
-      },
-    ],
+    author: authors,
   };
 
   const sanitizedJson = DOMPurify.sanitize(JSON.stringify(schemaData));

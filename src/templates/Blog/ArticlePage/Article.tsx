@@ -40,9 +40,8 @@ const Article: React.FC<ArticleProps> = ({
           ]}
         /> */}
           <div className={styles['article-path']}>
-            Blog <ChevronRightIcon width={20} height={20} /> How to use AI to create assignments.
+            <Link href="/blog">Blog</Link> <ChevronRightIcon width={20} height={20} /> {article.headline}
           </div>
-
           <div className={styles.authors}>
             {/* eslint-disable jsx-a11y/aria-role */}
             <AuthorCard author={article.author} role="author" />
