@@ -48,18 +48,21 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     const article = await BlogService.loadArticle(slug);
     const headers = extractHeaders(mdxText);
 
-    const sanitizedArticle = JSON.parse(JSON.stringify(article, (_, value) =>
-      value === undefined ? null : value
-    ));
+    const sanitizedArticle = JSON.parse(
+      JSON.stringify(article, (_, value) => (value === undefined ? null : value)),
+    ) as ArticleType;
 
     return {
       props: {
         article: sanitizedArticle,
         headers,
         mdxSource,
-      },
+      } satisfies Props,
     };
   } catch (error) {
+    if (error instanceof Error) {
+      console.error(`Failed to load article: ${error.message}`);
+    }
     return {
       notFound: true,
     };
