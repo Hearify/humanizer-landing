@@ -45,7 +45,8 @@ const Article: React.FC<ArticleProps> = ({
           <div className={styles.authors}>
             {/* eslint-disable jsx-a11y/aria-role */}
             <AuthorCard author={article.author} role="author" />
-            <AuthorCard author={article.editor} role="editor" />
+            {article.editor && <AuthorCard author={article.editor} role="editor" />}
+            {/* <AuthorCard author={article.editor} role="editor" /> */}
           </div>
 
           <div className={styles.header}>

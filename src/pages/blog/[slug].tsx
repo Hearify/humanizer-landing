@@ -48,9 +48,13 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     const article = await BlogService.loadArticle(slug);
     const headers = extractHeaders(mdxText);
 
+    const sanitizedArticle = JSON.parse(JSON.stringify(article, (_, value) =>
+      value === undefined ? null : value
+    ));
+
     return {
       props: {
-        article,
+        article: sanitizedArticle,
         headers,
         mdxSource,
       },

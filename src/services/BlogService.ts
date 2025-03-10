@@ -43,7 +43,10 @@ class BlogService {
     }
 
     const author = await BlogService.loadAuthor(article.authorSlug);
-    const editor = await BlogService.loadAuthor(article.editorSlug);
+    const editor = article.editorSlug
+      ? await BlogService.loadAuthor(article.editorSlug)
+      : undefined;
+
     const suggestions = articles
       .filter(item => item.slug !== slug)
       .slice(0, 3)
