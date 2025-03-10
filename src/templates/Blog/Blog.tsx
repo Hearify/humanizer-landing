@@ -1,10 +1,35 @@
 import React from 'react';
+// import { useRouter } from 'next/router';
 
-import styles from './Blog.module.scss';
 import ArrowImage from '../../assets/images/arrow.svg';
 import ArticleCards from '@/templates/Blog/ArticleCards/ArticleCards';
+import styles from './Blog.module.scss';
 
-const Blog = () => {
+import type { ArticlePreview } from '@/types/article';
+
+export type BlogProps = {
+  articles: ArticlePreview[];
+  // page: number;
+  // count: number;
+};
+
+const Blog: React.FC<BlogProps> = ({
+  articles, //
+  // page,
+  // count,
+}) => {
+  // const router = useRouter();
+  // const handlePageChange = async (newPage: number): Promise<void> => {
+  //   await router.push(
+  //     {
+  //       pathname: router.pathname,
+  //       query: { ...router.query, page: newPage },
+  //     },
+  //     undefined,
+  //     { scroll: true },
+  //   );
+  // };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -25,11 +50,19 @@ const Blog = () => {
         </div>
         <ArrowImage />
         <p className={styles['articles-title']}>Articles</p>
-        <ArticleCards />
 
-        <button className={styles['load-more-btn']} type="button">
+        <div className={styles.topics}>
+          <div className={styles.list}>
+            {articles.map(item => (
+              <ArticleCards key={item.slug} article={item} />
+            ))}
+          </div>
+          {/* We don't need pagination for now with juat a few articles. Block below can be used in future */}
+          {/* <button className={styles['load-more-btn']} type="button">
           Load More
-        </button>
+        </button> */}
+          {/* <AppPagination page={page} count={count} onChange={handlePageChange} /> */}
+        </div>
 
         <div className={styles['demo-container']}>
           <p>Let Abify help you write human AI content that resonates and drives results.</p>

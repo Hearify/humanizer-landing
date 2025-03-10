@@ -9,11 +9,11 @@ const buttonText = [
   { href: '/#features', text: 'Features' },
   { href: '/#how-abify-works', text: 'How Abify Works' },
   { href: '/#use-cases', text: 'Use Cases' },
-  { href: '/#abify-vs-competitors', text: 'Abify vs Competitors' },
+  // { href: '/#abify-vs-competitors', text: 'Abify vs Competitors' },
   { href: '/#faq', text: 'FAQ' },
-  // { href: '/contact-us', text: 'Contact Us' },
-  // { href: '/about-us', text: 'About Us' },
   { href: '/blog', text: 'Blog' },
+  { href: '/contact-us', text: 'Contact Us' },
+  { href: '/about-us', text: 'About Us' },
 ];
 
 const NavLinks: React.FC<NavLinkProps> = ({ closeMenu }) => {

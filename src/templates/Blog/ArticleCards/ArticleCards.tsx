@@ -1,201 +1,45 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import styles from './ArticleCards.module.scss';
-import ArticleCardPhoto from '../../../assets/images/photo.svg';
-import ArticleCardPhoto1 from '../../../assets/images/photo_1.svg';
-import ArticleCardPhoto2 from '../../../assets/images/photo_2.svg';
 
-const ArticleCards = () => {
+import type { ArticlePreview } from '@/types/article';
+
+export type ArticleCardProps = {
+  article: ArticlePreview;
+};
+
+const ArticleCards: React.FC<ArticleCardProps> = ({ article }) => {
+  const topicUrl = `/blog/${article.slug}`;
+
   return (
-    <div className={styles.articles}>
-      <div className={styles['article-card']}>
-        <ArticleCardPhoto />
-        <div className={styles['short-info']}>
-          <span className={styles.theme}>Lifestyle</span>
-          <span>7 min read</span>
+    <div className={styles.wrapper}>
+      <Link href={topicUrl}>
+        <Image src={article.coverUrl} alt={article.headline} width={320} height={230} className={styles.image} />
+      </Link>
+
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <span className={styles.section}>{article.tag}</span>
+          <span className={styles.minutes}>{article.minutesToRead} min read</span>
         </div>
+
         <div className={styles.body}>
-          <p className={styles.title}>Worem ipsum dolor sit amet</p>
-          <p className={styles.description}>
-            Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
-            odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
-            himenaeos.
-          </p>
-        </div>
-        <div className={styles['button-container']}>
-          <p className={styles.date}>2 Sep, 2025</p>
-          <Link className={styles['read-more-btn']} href="/blog/article/1" type="button">
-            Read More
+          <Link href={topicUrl} className={styles.link}>
+            <h4 className={styles.title}>{article.headline}</h4>
+            <p className={styles.description}>{article.description}</p>
           </Link>
-        </div>
-      </div>
-      <div className={styles['article-card']}>
-        <ArticleCardPhoto1 />
-        <div className={styles['short-info']}>
-          <span className={styles.theme}>Lifestyle</span>
-          <span>7 min read</span>
-        </div>
-        <div className={styles.body}>
-          <p className={styles.title}>Worem ipsum dolor sit amet</p>
-          <p className={styles.description}>
-            Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
-            odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
-            himenaeos.
-          </p>
-        </div>
-        <div className={styles['button-container']}>
-          <p className={styles.date}>2 Sep, 2025</p>
-          <Link className={styles['read-more-btn']} href="/blog/article/2" type="button">
-            Read More
-          </Link>
-        </div>
-      </div>
-      <div className={styles['article-card']}>
-        <ArticleCardPhoto2 />
-        <div className={styles['short-info']}>
-          <span className={styles.theme}>Lifestyle</span>
-          <span>7 min read</span>
-        </div>
-        <div className={styles.body}>
-          <p className={styles.title}>Worem ipsum dolor sit amet</p>
-          <p className={styles.description}>
-            Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
-            odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
-            himenaeos.
-          </p>
-        </div>
-        <div className={styles['button-container']}>
-          <p className={styles.date}>2 Sep, 2025</p>
-          <Link className={styles['read-more-btn']} href="/blog/article/3" type="button">
-            Read More
-          </Link>
-        </div>
-      </div>
-      <div className={styles['article-card']}>
-        <ArticleCardPhoto />
-        <div className={styles['short-info']}>
-          <span className={styles.theme}>Lifestyle</span>
-          <span>7 min read</span>
-        </div>
-        <div className={styles.body}>
-          <p className={styles.title}>Worem ipsum dolor sit amet</p>
-          <p className={styles.description}>
-            Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
-            odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
-            himenaeos.
-          </p>
-        </div>
-        <div className={styles['button-container']}>
-          <p className={styles.date}>2 Sep, 2025</p>
-          <Link className={styles['read-more-btn']} href="/blog/article/1" type="button">
-            Read More
-          </Link>
-        </div>
-      </div>
-      <div className={styles['article-card']}>
-        <ArticleCardPhoto1 />
-        <div className={styles['short-info']}>
-          <span className={styles.theme}>Lifestyle</span>
-          <span>7 min read</span>
-        </div>
-        <div className={styles.body}>
-          <p className={styles.title}>Worem ipsum dolor sit amet</p>
-          <p className={styles.description}>
-            Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
-            odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
-            himenaeos.
-          </p>
-        </div>
-        <div className={styles['button-container']}>
-          <p className={styles.date}>2 Sep, 2025</p>
-          <Link className={styles['read-more-btn']} href="/blog/article/2" type="button">
-            Read More
-          </Link>
-        </div>
-      </div>
-      <div className={styles['article-card']}>
-        <ArticleCardPhoto2 />
-        <div className={styles['short-info']}>
-          <span className={styles.theme}>Lifestyle</span>
-          <span>7 min read</span>
-        </div>
-        <div className={styles.body}>
-          <p className={styles.title}>Worem ipsum dolor sit amet</p>
-          <p className={styles.description}>
-            Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
-            odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
-            himenaeos.
-          </p>
-        </div>
-        <div className={styles['button-container']}>
-          <p className={styles.date}>2 Sep, 2025</p>
-          <Link className={styles['read-more-btn']} href="/blog/article/3" type="button">
-            Read More
-          </Link>
-        </div>
-      </div>
-      <div className={styles['article-card']}>
-        <ArticleCardPhoto />
-        <div className={styles['short-info']}>
-          <span className={styles.theme}>Lifestyle</span>
-          <span>7 min read</span>
-        </div>
-        <div className={styles.body}>
-          <p className={styles.title}>Worem ipsum dolor sit amet</p>
-          <p className={styles.description}>
-            Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
-            odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
-            himenaeos.
-          </p>
-        </div>
-        <div className={styles['button-container']}>
-          <p className={styles.date}>2 Sep, 2025</p>
-          <Link className={styles['read-more-btn']} href="/blog/article/1" type="button">
-            Read More
-          </Link>
-        </div>
-      </div>
-      <div className={styles['article-card']}>
-        <ArticleCardPhoto1 />
-        <div className={styles['short-info']}>
-          <span className={styles.theme}>Lifestyle</span>
-          <span>7 min read</span>
-        </div>
-        <div className={styles.body}>
-          <p className={styles.title}>Worem ipsum dolor sit amet</p>
-          <p className={styles.description}>
-            Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
-            odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
-            himenaeos.
-          </p>
-        </div>
-        <div className={styles['button-container']}>
-          <p className={styles.date}>2 Sep, 2025</p>
-          <Link className={styles['read-more-btn']} href="/blog/article/2" type="button">
-            Read More
-          </Link>
-        </div>
-      </div>
-      <div className={styles['article-card']}>
-        <ArticleCardPhoto2 />
-        <div className={styles['short-info']}>
-          <span className={styles.theme}>Lifestyle</span>
-          <span>7 min read</span>
-        </div>
-        <div className={styles.body}>
-          <p className={styles.title}>Worem ipsum dolor sit amet</p>
-          <p className={styles.description}>
-            Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
-            odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
-            himenaeos.
-          </p>
-        </div>
-        <div className={styles['button-container']}>
-          <p className={styles.date}>2 Sep, 2025</p>
-          <Link className={styles['read-more-btn']} href="/blog/article/3" type="button">
-            Read More
-          </Link>
+
+          <div className={styles.footer}>
+            <div className={styles.date}>{article.date}</div>
+
+            <div className={styles['button-container']}>
+              <Link className={styles['read-more-btn']} href={topicUrl} type="button">
+                Read More
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

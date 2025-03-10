@@ -56,7 +56,7 @@
   align-items: center;
   justify-content: center;
   gap: 24px;
-  width: 600px;
+  width: 700px;
 
   @include md {
     width: 100%;
@@ -66,10 +66,11 @@
 .title-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
   gap: 16px;
+  text-align: center;
 }
 
 .title {
@@ -109,6 +110,7 @@
 }
 
 .demo-container {
+  margin-top: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,5 +137,35 @@
 
   @include sm {
     width: 100%;
+  }
+}
+
+.topics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.topics-title {
+  margin-bottom: 16px;
+
+  @include md {
+    margin-bottom: 8px;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 24px;
+
+  @include lg {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+
+  @include sm {
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
   }
 }

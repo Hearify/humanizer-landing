@@ -1,67 +1,115 @@
 @use 'src/styles/helpers' as *;
 
-.articles {
+.wrapper {
   display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-  gap: 24px;
-  width: 100%;
-}
-
-.article-card {
-  display: flex;
-  flex: 0 1 32%;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 32px;
+  box-shadow: $shadow-card;
+  border-radius: $radius-small;
   background-color: var(--general-white);
-  color: var(--general-black);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.09);
-  border-radius: 12px;
-  padding: 16px 20px;
-  gap: 16px;
 
-  @include lg {
-    flex: 0 1 31.5%;
-    svg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  @include md {
-    flex: 0 1 48%;
-  }
-  @include sm {
-    flex: 0 1 100%;
+  &:hover {
+    transform: translateY(-4px);
+    transition: transform 0.2s ease-in-out;
   }
 }
 
-.short-info {
+.image {
+  width: 100%;
+  height: 230px;
+  border-radius: $radius-small;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 12px;
+}
+
+.header {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
+  align-items: center;
+}
 
-  .theme {
-    background-color: var(--brand-purpe-50);
-    padding: 4px 8px;
-    border-radius: 4px;
+.section {
+  @include text-subtitle-3;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: var(--brand-purpe-50);
+  color: var(--general-black);
+}
+
+.minutes {
+  @include text-main-3;
+  color: var(--general-black);
+}
+
+.title {
+  @include text-subtitle-2;
+  display: -webkit-box;
+  display: box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--general-black);
+  height: 85px;
+  margin-bottom: 16px;
+
+  @include sm {
+    margin-bottom: 2px;
   }
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  color: var(--general-black);
+  transition: $default-transition;
+
+  &:hover {
+    .title,
+    .description {
+      color: var(--brand-purpe-400);
+    }
+  }
+}
+
+.description {
+  @include text-main-2;
+  display: -webkit-box;
+  display: box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  word-break: break-word;
+  overflow: hidden;
+  color: var(--general-black);
+}
+
+.date {
+  @include text-subtitle-3;
+  color: var(--general-black);
+  white-space: nowrap;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex: 1;
   gap: 16px;
-
-  .title {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 30px;
-  }
 
   .description {
     font-size: 14px;
@@ -72,24 +120,32 @@
 
 .button-container {
   display: flex;
-  width: 100%;
+  align-items: center;
+  margin-left: auto;
+}
+
+.read-more-btn {
+  border: 2px solid var(--brand-purpe-400);
+  padding: 8px 12px;
+  border-radius: 12px;
+  color: var(--general-black);
+  font-weight: 600;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: var(--brand-purpe-400);
+    color: var(--general-white);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.footer {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-
-  .date {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 21px;
-  }
-
-  .read-more-btn {
-    border: 2px solid var(--brand-purpe-400);
-    padding: 8px 12px;
-    border-radius: 12px;
-
-    &:hover {
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      transition: $shadow-card;
-    }
-  }
+  width: 100%;
+  margin-top: auto;
+  gap: 8px;
 }
