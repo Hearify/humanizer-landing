@@ -6,6 +6,7 @@ import SeoContent from '@/templates/Home/SeoContent/SeoContent';
 import UniqueFeatures from '@/templates/Home/UniqueFeatures/UniqueFeatures';
 import HowAbifyWork from '@/templates/Home/HowAbifyWork/HowAbifyWork';
 import UseCases from '@/templates/Home/UseCases/UseCases';
+import Testimonials from '@/templates/Home/Testimonials/Testimonials';
 
 const Home: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
       <UniqueFeatures />
       <HowAbifyWork />
       <UseCases />
+      <Testimonials />
       <SeoContent />
     </main>
   );

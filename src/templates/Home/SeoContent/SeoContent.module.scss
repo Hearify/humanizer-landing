@@ -120,41 +120,6 @@
   }
 }
 
-.testimonialsGrid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(3, 1fr);
-
-  @include lg {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include md {
-    grid-template-columns: 1fr;
-  }
-}
-
-.testimonialCard {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.testimonialQuote {
-  color: #4a5568;
-  margin-bottom: 1rem;
-}
-
-.testimonialAuthor {
-  color: #1a202c;
-  font-weight: 500;
-}
-
-.testimonialRole {
-  color: #718096;
-}
-
 .howDoesAbifySection {
   margin-bottom: 1.5rem;
 }

@@ -37,7 +37,7 @@ const PageHeader: React.FC = () => {
         <div className={isDeviceLarge ? styles.navigation : styles.phone_navigation}>
           <div className={styles.logo_container}>
             <Link rel="stylesheet" onClick={closeMenu} href="/#humanize_section">
-              <AbifyLogo width={96} height={32} alt="Logo" />
+              <AbifyLogo width={96} height={32} />
             </Link>
           </div>
           {!isServer && isDeviceLarge ? (
