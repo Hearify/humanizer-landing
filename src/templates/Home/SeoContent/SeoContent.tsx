@@ -9,44 +9,6 @@ interface TableRow {
 }
 
 const SeoContent: React.FC = () => {
-  const testimonials = [
-    {
-      id: 1,
-      quote:
-        "Abify has helped me improve my blog posts by making them more natural and engaging for readers. It's the perfect tool for anyone who wants to create high-quality content quickly.",
-      author: 'Anna',
-      role: 'blogger',
-    },
-    {
-      id: 2,
-      quote:
-        'I was always afraid of AI detectors when I was working on academic texts, but Abify solved this problem. Now I am sure that my work sounds professional and passes plagiarism checks.',
-      author: 'Max',
-      role: 'PhD student',
-    },
-    {
-      id: 3,
-      quote:
-        "Thanks to Abify, we have significantly accelerated the creation of advertising texts for our clients. It doesn't just edit, but adapts the text to make it sound the way it should.",
-      author: 'Kate',
-      role: 'head of a marketing agency',
-    },
-    {
-      id: 4,
-      quote:
-        'Our marketing materials now look much more professional and resonate with our audience. Abify has become an integral part of our content strategy.',
-      author: 'Alex',
-      role: 'startup owner',
-    },
-    {
-      id: 5,
-      quote:
-        "Abify helped me quickly adapt texts for different markets thanks to its multilingual support. I don't waste time on manual editing - everything works perfectly.",
-      author: 'Jessy',
-      role: 'international marketing manager',
-    },
-  ];
-
   const competitors = [
     'Abify',
     'HumanizeAI.pro',
@@ -62,102 +24,102 @@ const SeoContent: React.FC = () => {
     'JustDone.ai',
   ];
 
-  const tableData: TableRow[] = [
-    {
-      id: 1,
-      feature: 'Humanize AI Content',
-      values: competitors.reduce<Record<string, string>>((acc, comp) => ({ ...acc, [comp]: '✅' }), {}),
-    },
-    {
-      id: 2,
-      feature: 'Bypass AI Detectors',
-      values: competitors.reduce<Record<string, string>>((acc, comp) => ({ ...acc, [comp]: '✅' }), {}),
-    },
-    {
-      id: 3,
-      feature: 'SEO Optimization',
-      values: competitors.reduce<Record<string, string>>(
-        (acc, comp) => ({
-          ...acc,
-          [comp]: ['Abify', 'AIHumanize.io', 'StealthWriter.ai'].includes(comp) ? '✅' : '❌',
-        }),
-        {},
-      ),
-    },
-    {
-      id: 4,
-      feature: 'Customizable Tones & Styles',
-      values: competitors.reduce<Record<string, string>>(
-        (acc, comp) => ({
-          ...acc,
-          [comp]: ['Abify', 'HumanizeAI.io', 'AIHumanize.io', 'Phrasly.ai', 'BypassAI.ai', 'JustDone.ai'].includes(comp)
-            ? '✅'
-            : '❌',
-        }),
-        {},
-      ),
-    },
-    {
-      id: 5,
-      feature: 'Multilingual Support',
-      values: competitors.reduce<Record<string, string>>(
-        (acc, comp) => ({
-          ...acc,
-          [comp]: ['Abify', 'AIHumanize.io'].includes(comp) ? '✅' : '❌',
-        }),
-        {},
-      ),
-    },
-    {
-      id: 6,
-      feature: 'Plagiarism-Free Output',
-      values: competitors.reduce<Record<string, string>>(
-        (acc, comp) => ({
-          ...acc,
-          [comp]: !['Humanizer.org', 'StealthWriter.ai'].includes(comp) ? '✅' : '❌',
-        }),
-        {},
-      ),
-    },
-    {
-      id: 7,
-      feature: 'Fast Processing',
-      values: competitors.reduce<Record<string, string>>((acc, comp) => ({ ...acc, [comp]: '✅' }), {}),
-    },
-    {
-      id: 8,
-      feature: 'User-Friendly Interface',
-      values: competitors.reduce<Record<string, string>>(
-        (acc, comp) => ({
-          ...acc,
-          [comp]: !['Phrasly.ai', 'BypassAI.ai'].includes(comp) ? '✅' : '❌',
-        }),
-        {},
-      ),
-    },
-    {
-      id: 9,
-      feature: 'Data Security',
-      values: competitors.reduce<Record<string, string>>(
-        (acc, comp) => ({
-          ...acc,
-          [comp]: ['Abify', 'BypassAI.ai'].includes(comp) ? '✅' : '❌',
-        }),
-        {},
-      ),
-    },
-    {
-      id: 10,
-      feature: 'Free Demo Available',
-      values: competitors.reduce<Record<string, string>>(
-        (acc, comp) => ({
-          ...acc,
-          [comp]: !['Humanizer.org', 'StealthWriter.ai'].includes(comp) ? '✅' : '❌',
-        }),
-        {},
-      ),
-    },
-  ];
+  // const tableData: TableRow[] = [
+  //   {
+  //     id: 1,
+  //     feature: 'Humanize AI Content',
+  //     values: competitors.reduce<Record<string, string>>((acc, comp) => ({ ...acc, [comp]: '✅' }), {}),
+  //   },
+  //   {
+  //     id: 2,
+  //     feature: 'Bypass AI Detectors',
+  //     values: competitors.reduce<Record<string, string>>((acc, comp) => ({ ...acc, [comp]: '✅' }), {}),
+  //   },
+  //   {
+  //     id: 3,
+  //     feature: 'SEO Optimization',
+  //     values: competitors.reduce<Record<string, string>>(
+  //       (acc, comp) => ({
+  //         ...acc,
+  //         [comp]: ['Abify', 'AIHumanize.io', 'StealthWriter.ai'].includes(comp) ? '✅' : '❌',
+  //       }),
+  //       {},
+  //     ),
+  //   },
+  //   {
+  //     id: 4,
+  //     feature: 'Customizable Tones & Styles',
+  //     values: competitors.reduce<Record<string, string>>(
+  //       (acc, comp) => ({
+  //         ...acc,
+  //         [comp]: ['Abify', 'HumanizeAI.io', 'AIHumanize.io', 'Phrasly.ai', 'BypassAI.ai', 'JustDone.ai'].includes(comp)
+  //           ? '✅'
+  //           : '❌',
+  //       }),
+  //       {},
+  //     ),
+  //   },
+  //   {
+  //     id: 5,
+  //     feature: 'Multilingual Support',
+  //     values: competitors.reduce<Record<string, string>>(
+  //       (acc, comp) => ({
+  //         ...acc,
+  //         [comp]: ['Abify', 'AIHumanize.io'].includes(comp) ? '✅' : '❌',
+  //       }),
+  //       {},
+  //     ),
+  //   },
+  //   {
+  //     id: 6,
+  //     feature: 'Plagiarism-Free Output',
+  //     values: competitors.reduce<Record<string, string>>(
+  //       (acc, comp) => ({
+  //         ...acc,
+  //         [comp]: !['Humanizer.org', 'StealthWriter.ai'].includes(comp) ? '✅' : '❌',
+  //       }),
+  //       {},
+  //     ),
+  //   },
+  //   {
+  //     id: 7,
+  //     feature: 'Fast Processing',
+  //     values: competitors.reduce<Record<string, string>>((acc, comp) => ({ ...acc, [comp]: '✅' }), {}),
+  //   },
+  //   {
+  //     id: 8,
+  //     feature: 'User-Friendly Interface',
+  //     values: competitors.reduce<Record<string, string>>(
+  //       (acc, comp) => ({
+  //         ...acc,
+  //         [comp]: !['Phrasly.ai', 'BypassAI.ai'].includes(comp) ? '✅' : '❌',
+  //       }),
+  //       {},
+  //     ),
+  //   },
+  //   {
+  //     id: 9,
+  //     feature: 'Data Security',
+  //     values: competitors.reduce<Record<string, string>>(
+  //       (acc, comp) => ({
+  //         ...acc,
+  //         [comp]: ['Abify', 'BypassAI.ai'].includes(comp) ? '✅' : '❌',
+  //       }),
+  //       {},
+  //     ),
+  //   },
+  //   {
+  //     id: 10,
+  //     feature: 'Free Demo Available',
+  //     values: competitors.reduce<Record<string, string>>(
+  //       (acc, comp) => ({
+  //         ...acc,
+  //         [comp]: !['Humanizer.org', 'StealthWriter.ai'].includes(comp) ? '✅' : '❌',
+  //       }),
+  //       {},
+  //     ),
+  //   },
+  // ];
 
   return (
     <div className={styles.wrapper}>
@@ -179,49 +141,38 @@ const SeoContent: React.FC = () => {
         </section>
         <h2 className={styles.title}> Let Abify help you write human AI content that resonates and drives results.</h2>
 
-        <section className={styles.testimonialsGrid}>
-          {testimonials.map(testimonial => (
-            <div key={testimonial.id} className={styles.testimonialCard}>
-              <p className={styles.testimonialQuote}>&ldquo;{testimonial.quote}&rdquo;</p>
-              <div className={styles.testimonialAuthor}>
-                - {testimonial.author}, <span className={styles.testimonialRole}>{testimonial.role}</span>
-              </div>
-            </div>
-          ))}
-        </section>
-
-        <section className={styles.comparisonSection}>
-          <h2 className={styles.comparisonTitle}>Abify vs Other AI Humanizers</h2>
-          <div className={styles.comparisonTableContainer}>
-            <table className={styles.comparisonTable}>
-              <thead>
-                <tr className={styles.comparisonHeaderRow}>
-                  <th className={styles.comparisonHeaderCell}>Function</th>
-                  {competitors.map(competitor => (
-                    <th key={competitor} className={`${styles.comparisonHeaderCell} ${styles.textCenter}`}>
-                      {competitor}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {tableData.map(row => (
-                  <tr key={row.id} className={styles.comparisonDataRow}>
-                    <td className={`${styles.comparisonDataCell} ${styles.featureCell}`}>{row.feature}</td>
-                    {competitors.map(competitor => (
-                      <td
-                        key={`${row.id}-${competitor}`}
-                        className={`${styles.comparisonDataCell} ${styles.textCenter}`}
-                      >
-                        {row.values[competitor]}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
+        {/* <section className={styles.comparisonSection}> */}
+        {/*   <h2 className={styles.comparisonTitle}>Abify vs Other AI Humanizers</h2> */}
+        {/*   <div className={styles.comparisonTableContainer}> */}
+        {/*     <table className={styles.comparisonTable}> */}
+        {/*       <thead> */}
+        {/*         <tr className={styles.comparisonHeaderRow}> */}
+        {/*           <th className={styles.comparisonHeaderCell}>Function</th> */}
+        {/*           {competitors.map(competitor => ( */}
+        {/*             <th key={competitor} className={`${styles.comparisonHeaderCell} ${styles.textCenter}`}> */}
+        {/*               {competitor} */}
+        {/*             </th> */}
+        {/*           ))} */}
+        {/*         </tr> */}
+        {/*       </thead> */}
+        {/*       <tbody> */}
+        {/*         {tableData.map(row => ( */}
+        {/*           <tr key={row.id} className={styles.comparisonDataRow}> */}
+        {/*             <td className={`${styles.comparisonDataCell} ${styles.featureCell}`}>{row.feature}</td> */}
+        {/*             {competitors.map(competitor => ( */}
+        {/*               <td */}
+        {/*                 key={`${row.id}-${competitor}`} */}
+        {/*                 className={`${styles.comparisonDataCell} ${styles.textCenter}`} */}
+        {/*               > */}
+        {/*                 {row.values[competitor]} */}
+        {/*               </td> */}
+        {/*             ))} */}
+        {/*           </tr> */}
+        {/*         ))} */}
+        {/*       </tbody> */}
+        {/*     </table> */}
+        {/*   </div> */}
+        {/* </section> */}
 
         <section className={styles.body}>
           <h2 className={styles.title}>FAQ</h2>

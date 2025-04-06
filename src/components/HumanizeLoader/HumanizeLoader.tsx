@@ -10,7 +10,7 @@ const HumanizeLoader = () => {
     <div className={styles['loading-container']}>
       {items.map(i => (
         <div key={i} className={`${styles.circle} ${styles[`circle-${i}`]}`}>
-          <LoaderItem width={48} height={24} alt={`Loader ${i}`} />
+          <LoaderItem width={48} height={24} />
         </div>
       ))}
     </div>

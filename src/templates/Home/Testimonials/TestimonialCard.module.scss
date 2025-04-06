@@ -1,0 +1,58 @@
+@use '/src/styles/helpers' as *;
+
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  gap: 16px;
+  padding: 16px;
+  width: 380px;
+  height: 260px;
+  color: var(--general-black);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  margin: 20px 1px;
+
+  @include lg {
+    width: 295px;
+    height: 300px;
+    margin: 20px 2px;
+  }
+
+  @include md {
+    width: 345px;
+    height: 280px;
+    margin: 20px 2px;
+  }
+
+  @include sm {
+    width: 100%;
+    height: auto;
+    margin: 20px 2px;
+  }
+
+  .quote {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .author {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(71, 85, 105, 1);
+  }
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .image {
+    width: 80px;
+    height: 80px;
+  }
+}

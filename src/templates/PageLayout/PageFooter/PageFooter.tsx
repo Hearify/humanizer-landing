@@ -10,7 +10,7 @@ const PageFooter: React.FC = () => {
     <div className={styles.wrapper}>
       <div className={styles.content}>
         <Link href="/#humanize_section">
-          <AbifyFooterLogo width={96} height={32} alt="Logo" />
+          <AbifyFooterLogo width={96} height={32} />
         </Link>
         <div className={styles.navigation}>
           <nav className={styles.links}>
