@@ -42,7 +42,7 @@ const PageHeader: React.FC = () => {
           </div>
           {!isServer && isDeviceLarge ? (
             <nav className={styles.links}>
-              <NavLinks closeMenu={closeMenu} />
+              <NavLinks forHeader closeMenu={closeMenu} />
             </nav>
           ) : (
             <>
@@ -66,7 +66,7 @@ const PageHeader: React.FC = () => {
               {isMenuOpen && (
                 <div className={cn(styles.drawer, styles.drawerActive)}>
                   <div className={styles.drawerContent}>
-                    <NavLinks closeMenu={closeMenu} />
+                    <NavLinks forHeader closeMenu={closeMenu} />
                     {isDeviceSmall && (
                       <Link href="/#humanize_section" className={styles['humanize-btn']}>
                         TRY A LIVE DEMO

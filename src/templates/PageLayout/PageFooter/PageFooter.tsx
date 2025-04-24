@@ -14,7 +14,7 @@ const PageFooter: React.FC = () => {
         </Link>
         <div className={styles.navigation}>
           <nav className={styles.links}>
-            <NavLinks />
+            <NavLinks forHeader={false} />
           </nav>
           <div className={styles.terms}>
             Be sure to take a look at our <button type="button">Terms of Use</button> and{' '}

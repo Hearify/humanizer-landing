@@ -3,23 +3,28 @@ import React from 'react';
 
 type NavLinkProps = {
   closeMenu?: () => void;
+  forHeader: boolean;
 };
 
-const buttonText = [
-  { href: '/#features', text: 'Features' },
-  { href: '/#how-abify-works', text: 'How Abify Works' },
-  { href: '/#use-cases', text: 'Use Cases' },
-  // { href: '/#abify-vs-competitors', text: 'Abify vs Competitors' },
-  { href: '/#faq', text: 'FAQ' },
+const buttonTextHeader = [
   { href: '/blog', text: 'Blog' },
   { href: '/contact-us', text: 'Contact Us' },
   { href: '/about-us', text: 'About Us' },
 ];
 
-const NavLinks: React.FC<NavLinkProps> = ({ closeMenu }) => {
+const buttonTextFooter = [
+  { href: '/#why-choose-us', text: 'Why Choose Us' },
+  { href: '/#how-abify-works', text: 'How Abify Works' },
+  { href: '/#features', text: 'Features' },
+  { href: '/#faq', text: 'FAQ' },
+];
+
+const NavLinks: React.FC<NavLinkProps> = ({ closeMenu, forHeader }) => {
+  const links = forHeader ? buttonTextHeader : buttonTextFooter;
+
   return (
     <>
-      {buttonText.map(({ text, href }) => (
+      {links.map(({ text, href }) => (
         <Link key={text} href={href} onClick={closeMenu}>
           {text}
         </Link>

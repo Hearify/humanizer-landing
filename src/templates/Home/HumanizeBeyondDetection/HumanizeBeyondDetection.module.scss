@@ -1,0 +1,148 @@
+@use 'src/styles/helpers' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: var(--font-nunito), sans-serif;
+  width: 100%;
+  height: 830px;
+  padding: 80px 0;
+  background-image: url('~../../../../public/humanize_beyond_detction.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include lg {
+    height: auto;
+  }
+
+  @include sm {
+    padding: 40px 0;
+  }
+}
+
+.container {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--general-white);
+
+  @include lg {
+    width: 900px;
+    gap: 40px;
+  }
+
+  @include md {
+    width: 700px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 52px;
+  }
+
+  @include sm {
+    width: 100%;
+    padding: 0 32px;
+  }
+}
+
+.top-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
+  height: 300px;
+
+  @include md {
+    flex-direction: column;
+    margin-bottom: 250px;
+  }
+
+  @include sm {
+    margin-bottom: 500px;
+  }
+
+  .top-body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 42px;
+
+    @include lg {
+      font-size: 28px;
+    }
+    @include sm {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  .first-image {
+    width: 600px;
+    height: 250px;
+
+    @include lg {
+      width: 400px;
+      height: 200px;
+    }
+    @include md {
+      width: 100%;
+      height: auto;
+    }
+    @include md {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+}
+
+.bottom-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
+
+  @include md {
+    flex-direction: column-reverse;
+  }
+
+  .second-image {
+    width: 785px;
+    height: 350px;
+
+    @include lg {
+      width: 570px;
+      height: 270px;
+    }
+    @include md {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
