@@ -7,6 +7,7 @@ import UniqueFeatures from '@/templates/Home/UniqueFeatures/UniqueFeatures';
 import HowAbifyWork from '@/templates/Home/HowAbifyWork/HowAbifyWork';
 import UseCases from '@/templates/Home/UseCases/UseCases';
 import Testimonials from '@/templates/Home/Testimonials/Testimonials';
+import HumanizeBeyondDetection from '@/templates/Home/HumanizeBeyondDetection/HumanizeBeyondDetection';
 
 const Home: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
       <HowAbifyWork />
       <UseCases />
       <Testimonials />
+      <HumanizeBeyondDetection />
       <SeoContent />
     </main>
   );

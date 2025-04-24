@@ -42,10 +42,10 @@
 
 .navigation {
   display: flex;
-  gap: 60px;
+  gap: 160px;
   color: var(--general-white, #fefdff);
   @include lg {
-    gap: 28px;
+    gap: 108px;
   }
   @include md {
     flex-direction: column;
@@ -61,7 +61,7 @@
   font-weight: 600;
 
   @include lg {
-    gap: 12px;
+    gap: 36px;
     font-size: 13px;
   }
   @include md {
@@ -86,8 +86,8 @@
   }
 
   @include lg {
-    font-size: 12px;
-    width: 190px;
+    font-size: 14px;
+    width: 210px;
   }
 
   @include md {
