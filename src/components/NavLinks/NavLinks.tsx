@@ -13,7 +13,7 @@ const buttonTextHeader = [
 ];
 
 const buttonTextFooter = [
-  { href: '/#why-choose-us', text: 'Why Choose Us' },
+  { href: '/#use-cases', text: 'Use Cases' },
   { href: '/#how-abify-works', text: 'How Abify Works' },
   { href: '/#features', text: 'Features' },
   { href: '/#faq', text: 'FAQ' },

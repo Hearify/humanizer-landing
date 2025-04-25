@@ -11,7 +11,7 @@ const HowAbifyWork = () => {
   const { isDeviceSmall } = useDeviceDetect('sm');
 
   return (
-    <div className={isDeviceLarge ? styles.wrapper : styles['tablet-wrapper']}>
+    <div className={isDeviceLarge ? styles.wrapper : styles['tablet-wrapper']} id="how-abify-works">
       <div className={styles.container}>
         <div className={styles.title}>
           <p>How Does Abify Work?</p>
