@@ -1,0 +1,76 @@
+@use 'src/styles/helpers' as *;
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: var(--font-nunito), sans-serif;
+  width: 100%;
+  height: auto;
+  margin-bottom: -45px;
+}
+
+.container {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  color: var(--general-black);
+
+  @include lg {
+    width: 900px;
+  }
+
+  @include md {
+    width: 700px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include sm {
+    width: 100%;
+    padding: 0 32px;
+  }
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 24px;
+  margin-top: 64px;
+  width: 600px;
+
+  @include sm {
+    width: auto;
+  }
+
+.demo-text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+}
+}
+
+.humanize-btn {
+  width: 270px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 150%;
+  padding: 12px 0;
+  color: var(--general-white, #fefdff);
+  background-color: var(--brand-purpe-400, #6444f4);
+  border-radius: 6px;
+}
