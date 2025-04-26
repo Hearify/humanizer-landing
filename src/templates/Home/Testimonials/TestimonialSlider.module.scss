@@ -1,6 +1,5 @@
 @use '/src/styles/helpers' as *;
 
-
 .testimonialSliderContainer {
   width: 1150px;
   border-radius: 12px;
@@ -19,7 +18,8 @@
   }
 }
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
   font-size: 24px;
   color: #333;
   background-color: rgba(255, 255, 255, 0.8);
@@ -39,4 +39,9 @@
   color: #333000;
 }
 
-.slick-list { margin: 0 -7px; & .slick-slide > div { padding: 0 10px; }}
+.slick-list {
+  margin: 0 -7px;
+  & .slick-slide > div {
+    padding: 0 10px;
+  }
+}
