@@ -9,6 +9,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { SparklesIcon, CheckCircleIcon } from '@heroicons/react/24/solid';
 import cn from 'classnames';
+import Link from 'next/link';
 
 import styles from './Humanize.module.scss';
 import AppSelect from '@/components/AppSelect/AppSelect';
@@ -154,9 +155,9 @@ const Humanize: React.FC = () => {
               effective.
             </p>
           </div>
-          <button className={styles['humanize-btn']} type="button">
+          <Link href="/#humanize_section" className={styles['humanize-btn']}>
             TRY A LIVE DEMO
-          </button>
+          </Link>
         </div>
         <div className={styles['humanize-container']}>
           <div className={cn(styles['input-container'], styles['enter-text-container'])}>
