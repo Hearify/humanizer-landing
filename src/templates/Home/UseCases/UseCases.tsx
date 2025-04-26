@@ -20,7 +20,7 @@ import useDeviceDetect from '@/hooks/useDeviceDetect';
 const UseCases = () => {
   const { isDeviceLarge } = useDeviceDetect('md');
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="use-cases">
       <div className={styles.container}>
         <div className={styles['title-container']}>
           <p className={styles['styles-text']}>Use Cases</p>

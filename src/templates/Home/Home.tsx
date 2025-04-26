@@ -8,6 +8,7 @@ import HowAbifyWork from '@/templates/Home/HowAbifyWork/HowAbifyWork';
 import UseCases from '@/templates/Home/UseCases/UseCases';
 import Testimonials from '@/templates/Home/Testimonials/Testimonials';
 import HumanizeBeyondDetection from '@/templates/Home/HumanizeBeyondDetection/HumanizeBeyondDetection';
+import MultilingualSection from '@/templates/Home/MultilingualSection/MultilingualSection';
 
 const Home: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
       <UseCases />
       <Testimonials />
       <HumanizeBeyondDetection />
+      <MultilingualSection />
       <SeoContent />
     </main>
   );
