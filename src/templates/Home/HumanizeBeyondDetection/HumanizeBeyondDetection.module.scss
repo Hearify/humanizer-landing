@@ -90,6 +90,7 @@
   .first-image {
     width: 600px;
     height: 250px;
+    border-radius: 20px;
 
     @include lg {
       width: 400px;
@@ -121,6 +122,7 @@
   .second-image {
     width: 785px;
     height: 350px;
+    border-radius: 20px;
 
     @include lg {
       width: 570px;

@@ -22,8 +22,12 @@ const useDeviceDetect = (breakpoint: DeviceDetectBreakpoint = 'md') => {
   useLayoutEffect(handleUpdateDevice);
 
   useEffect(() => {
-    window.addEventListener('resize', handleUpdateDevice);
-    return () => window.removeEventListener('resize', handleUpdateDevice);
+    if (typeof window !== 'undefined') {
+      handleUpdateDevice();
+      window.addEventListener('resize', handleUpdateDevice);
+      return () => window.removeEventListener('resize', handleUpdateDevice);
+    }
+    return undefined;
   }, []);
 
   return {
