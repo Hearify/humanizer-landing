@@ -2,15 +2,15 @@ import Image from 'next/image';
 import React from 'react';
 
 import styles from '@/templates/Home/HowAbifyWork/HowAbifyWork.module.scss';
-import FirstStepImage from '@/assets/images/first-step.png';
+import FirstStepImage from '@/assets/images/first-step-1.png';
 import StepNumber1 from '@/assets/icons/step-number-1-icon.png';
 import TabletRightArrow from '@/assets/images/tablet-right-arrow.png.png';
-import SecondStepImage from '@/assets/images/second-step.png';
+import SecondStepImage from '@/assets/images/second-step-2.png';
 import StepNumber2 from '@/assets/icons/step-number-2-icon.png';
 import TabletLeftArrow from '@/assets/images/tablet-left-arrow.png';
-import ThirdStepImage from '@/assets/images/third-step.png';
+import ThirdStepImage from '@/assets/images/third-step-3.png';
 import StepNumber3 from '@/assets/icons/step-number-3-icon.png';
-import FourthStepImage from '@/assets/images/fourth-step.png';
+import FourthStepImage from '@/assets/images/fourth-step-4.png';
 import StepNumber4 from '@/assets/icons/step-number-4-icon.png';
 
 const TabletVersionHowAbifyWork = () => {

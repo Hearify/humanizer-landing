@@ -6,6 +6,7 @@ const Document = () => {
     <Html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preload" href="/humanize_bg.png" as="image" />
       </Head>
       <body>
         <Main />

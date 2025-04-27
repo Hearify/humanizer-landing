@@ -12,6 +12,12 @@ const PageHeader: React.FC = () => {
   const { isDeviceLarge, isServer } = useDeviceDetect('md');
   const { isDeviceSmall } = useDeviceDetect('sm');
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -31,6 +37,8 @@ const PageHeader: React.FC = () => {
     };
   }, [isMenuOpen]);
 
+  if (isServer || !mounted) return null;
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -40,11 +48,7 @@ const PageHeader: React.FC = () => {
               <AbifyLogo width={96} height={32} />
             </Link>
           </div>
-          {!isServer && isDeviceLarge ? (
-            <nav className={styles.links}>
-              <NavLinks forHeader closeMenu={closeMenu} />
-            </nav>
-          ) : (
+          {!isDeviceLarge ? (
             <>
               <div className={styles['burger-wrapper']}>
                 {!isDeviceSmall && (
@@ -77,6 +81,10 @@ const PageHeader: React.FC = () => {
               )}
               <div className={cn(styles.overlay, isMenuOpen && styles.overlayActive)} />
             </>
+          ) : (
+            <nav className={styles.links}>
+              <NavLinks forHeader closeMenu={closeMenu} />
+            </nav>
           )}
         </div>
         {isDeviceLarge && (

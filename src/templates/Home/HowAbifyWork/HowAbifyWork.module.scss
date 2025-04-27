@@ -124,6 +124,7 @@
   .step-image {
     width: 588px;
     height: 320px;
+    border-radius: 20px;
 
     @include lg {
       width: 440px;
@@ -202,6 +203,7 @@
   .step-image {
     width: 580px;
     height: 320px;
+    border-radius: 20px;
   }
   .step-body {
     display: flex;
@@ -268,12 +270,11 @@
   flex-direction: column;
   margin-bottom: 20px;
 
-  .phone-step-image {
-    width: 375px;
+  .step-image {
+    width: 355px;
     height: 500px;
-    .step-image {
-      object-fit: cover;
-    }
+    border-radius: 20px;
+    margin-bottom: 20px;
   }
 
   .step-body {
