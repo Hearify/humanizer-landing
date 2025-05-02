@@ -1,13 +1,23 @@
 @use 'src/styles/helpers' as *;
 
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: var(--font-nunito), sans-serif;
+  color: var(--general-black);
+
+}
+
 .wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-nunito), sans-serif;
   width: 100%;
-  padding-top: 60px;
-  background-image: linear-gradient(to top, #ffffff, rgba(0, 0, 0, 0.3) 3%), url('~../../../public/contact_us.png');
+  padding-top: 80px;
+  background-image: linear-gradient(to top, #ffffff, rgba(0, 0, 0, 0) 20%), url('/contact_about_us_bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -23,7 +33,7 @@
   max-width: 1200px;
   height: 100%;
   padding: 40px 0 80px 0;
-  gap: 40px;
+  gap: 56px;
 
   @include xl {
     max-width: 1040px;
@@ -32,49 +42,168 @@
     max-width: 900px;
   }
   @include md {
+    align-items: flex-start;
     padding: 24px 32px 80px 32px;
   }
 }
 
-.title {
-  @include text-heading-1;
-}
-
-.sub-title {
-  @include text-heading-2;
-}
-
-.description {
-  @include text-subtitle-2;
-  text-align: center;
-  max-width: 590px;
-}
-
-.section {
+.body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 24px;
-  max-width: 800px;
-  @include text-subtitle-2;
-}
-
-.label {
-  @include text-heading-4;
+  align-items: flex-start;
+  justify-content: center;
+  width: 580px;
+  height: auto;
+  gap: 16px;
 
   @include sm {
-    font-size: 20px;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 150%;
+  }
+
+  .paragraphs {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 150%;
+    gap: 12px;
   }
 }
 
-.text {
-  @include text-subtitle-2;
+
+
+.info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @include md {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .info-card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 49%;
+    min-height: 345px;
+    height: auto;
+    border-radius: 12px;
+    padding: 16px 20px;
+    gap: 16px;
+    color: var(--general-black);
+    background-color: var(--general-white);
+
+    @include lg {
+      min-height: 410px;
+    }
+
+    @include md {
+      min-height: 300px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 150%;
+    }
+
+    .description {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
 }
 
-.list {
+.why-choose-us-container {
   display: flex;
   flex-direction: column;
-  list-style: none;
-  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 64px 0;
+  gap: 32px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.why-choose-us-cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1200px;
+
+  @include xl {
+    max-width: 1040px;
+  }
+
+  @include lg {
+    max-width: 900px;
+  }
+
+  @include md {
+    max-width: 100%;
+    gap: 16px 0;
+    padding: 24px 32px 60px 32px;
+  }
+
+  @include sm {
+    padding: 24px 32px 0 32px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 24%;
+    min-height: 200px;
+    height: auto;
+    border-radius: 12px;
+    padding: 16px 20px;
+    gap: 16px;
+    color: var(--general-black);
+    background-color: var(--general-white);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+
+    @include lg {
+      flex: 0 1 23.5%;
+      min-height: 250px;
+    }
+
+    @include md {
+      flex: 0 1 48%;
+      min-height: 0;
+    }
+
+    @include sm {
+      flex: 0 1 100%;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 150%;
+      margin-bottom: 12px;
+    }
+
+    .description {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
 }

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import React from 'react';
 
 import AboutUs from '@/templates/AboutUs/AboutUs';
 
@@ -13,6 +14,7 @@ const AboutUsPage: NextPage = () => {
     <>
       <Head>
         <title>{pageTitle}</title>
+        <link rel="preload" href="/contact_about_us_bg.png" as="image" />
         <meta name="description" content={pageDescription} />
         <meta name="keywords" content={pageKeywords} />
         <meta property="og:title" content={pageTitle} />
