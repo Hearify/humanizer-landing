@@ -1,26 +1,27 @@
+import fs from 'fs';
+import path from 'path';
+
 import type { Author } from '@/types/author';
 import type { Article, ArticlePreview } from '@/types/article';
 
+const dataDir = path.join(process.cwd(), 'src/data/blog');
+
 class BlogService {
   public static loadArticlePreviews = async (): Promise<ArticlePreview[]> => {
-    const response = await fetch(
-      `https://firebasestorage.googleapis.com/v0/b/hearify-9dd16.appspot.com/o/humanizer-blog%2Farticles.json?alt=media`,
-    );
-    return response.json();
+    const filePath = path.join(dataDir, 'articles.json');
+    const raw = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(raw) as ArticlePreview[];
   };
 
   public static loadAuthors = async (): Promise<Author[]> => {
-    const response = await fetch(
-      `https://firebasestorage.googleapis.com/v0/b/hearify-9dd16.appspot.com/o/authors.json?alt=media`,
-    );
-    return response.json();
+    const filePath = path.join(dataDir, 'authors.json');
+    const raw = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(raw) as Author[];
   };
 
   public static loadArticleMarkdown = async (slug: string): Promise<string> => {
-    const response = await fetch(
-      `https://firebasestorage.googleapis.com/v0/b/hearify-9dd16.appspot.com/o/humanizer-blog%2Farticles%2F${slug}.mdx?alt=media`,
-    );
-    return response.text();
+    const filePath = path.join(dataDir, 'articles', `${slug}.mdx`);
+    return fs.readFileSync(filePath, 'utf-8');
   };
 
   public static loadAuthor = async (slug: string): Promise<Author> => {

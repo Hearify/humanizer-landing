@@ -36,8 +36,8 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta property="og:site_name" content="Abify" />
         <meta key="og:image" property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL}/main-image.png`} />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="prefetch" href="/humanize_bg.png" as="image" />
-        <link rel="prefetch" href="/contact_us.png" as="image" />
+        <link rel="prefetch" href="/humanize_bg.webp" as="image" type="image/webp" />
+        <link rel="prefetch" href="/contact_us.webp" as="image" type="image/webp" />
 
         <meta name="robots" content="index, follow" />
       </Head>

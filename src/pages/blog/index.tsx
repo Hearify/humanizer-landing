@@ -31,14 +31,27 @@ const BlogPage: NextPage<BlogProps> = ({ articles }) => {
 export default BlogPage;
 
 export const getServerSideProps: GetServerSideProps<BlogProps> = async context => {
-  const page = Number(context.query.page) || 1;
-  const articles = await BlogService.loadArticlePreviews();
+  try {
+    const page = Number(context.query.page) || 1;
+    const articles = await BlogService.loadArticlePreviews();
 
-  return {
-    props: {
-      page,
-      count: Math.ceil(articles.length / PAGE_SIZE),
-      articles: articles.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE),
-    },
-  };
+    return {
+      props: {
+        page,
+        count: Math.ceil(articles.length / PAGE_SIZE),
+        articles: articles.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE),
+      },
+    };
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(`Failed to load blog articles: ${error.message}`);
+    }
+    return {
+      props: {
+        page: 1,
+        count: 0,
+        articles: [],
+      },
+    };
+  }
 };

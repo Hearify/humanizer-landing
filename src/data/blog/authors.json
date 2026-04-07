@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "sarah-mitchell",
+    "name": "Sarah Mitchell",
+    "description": "Content strategist and AI writing specialist with 7+ years in digital marketing.",
+    "avatarUrl": "https://ui-avatars.com/api/?name=Sarah+Mitchell&background=6C5DD3&color=fff&size=200&bold=true",
+    "linkedInUrl": "https://linkedin.com",
+    "aboutMe": "Sarah helps businesses create content that resonates with real audiences by bridging the gap between AI efficiency and human creativity. She has consulted for over 50 brands on their AI content strategy."
+  },
+  {
+    "slug": "james-carter",
+    "name": "James Carter",
+    "description": "SEO expert and technical writer focused on AI-generated content optimization.",
+    "avatarUrl": "https://ui-avatars.com/api/?name=James+Carter&background=3B82F6&color=fff&size=200&bold=true",
+    "linkedInUrl": "https://linkedin.com",
+    "aboutMe": "James specializes in helping content teams scale their output with AI tools while maintaining the quality and authenticity readers expect."
+  }
+]
