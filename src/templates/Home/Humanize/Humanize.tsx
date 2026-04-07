@@ -132,9 +132,12 @@ const Humanize: React.FC = () => {
     <div id="humanize_section" className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.content}>
+          <div className={styles.badge}>
+            <SparklesIcon width={14} height={14} />
+            AI to Human Text Converter
+          </div>
           <div className={styles.title}>
-            <h2 className={styles.title}>AI to Human Text Converter</h2>
-            <h1 className={styles.title}>Transform AI into Undetectable & Unique Writing </h1>
+            <h1>Transform AI into Undetectable & Unique Writing</h1>
           </div>
           <div className={styles.description}>
             <p>
@@ -170,12 +173,17 @@ const Humanize: React.FC = () => {
                 />
               </div>
             </div>
-            <textarea
-              className={styles.textarea}
-              placeholder={'To rewrite your content, type or paste it here or click on the "Humanize" button below.'}
-              onChange={handleChange}
-              value={userText}
-            />
+            <div className={styles['textarea-wrapper']}>
+              <textarea
+                className={styles.textarea}
+                placeholder={'To rewrite your content, type or paste it here or click on the "Humanize" button below.'}
+                onChange={handleChange}
+                value={userText}
+              />
+            </div>
+            <p className={styles['word-count']}>
+              {userText.trim() ? `${userText.trim().split(/\s+/).length} words` : '0 words'}
+            </p>
             <div className={styles['enter-text-btns']}>
               <div className={styles['paste-try-btns']}>
                 <AppButton text="PASTE TEXT" Icon={DocumentTextIcon} onClick={handlePaste} disabled={false} />
