@@ -1,27 +1,25 @@
-import fs from 'fs';
-import path from 'path';
+import articlesData from '@/data/blog/articles.json';
+import authorsData from '@/data/blog/authors.json';
+import articleContent from '@/data/blog/articleContent';
 
 import type { Author } from '@/types/author';
 import type { Article, ArticlePreview } from '@/types/article';
 
-const dataDir = path.join(process.cwd(), 'src/data/blog');
-
 class BlogService {
   public static loadArticlePreviews = async (): Promise<ArticlePreview[]> => {
-    const filePath = path.join(dataDir, 'articles.json');
-    const raw = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(raw) as ArticlePreview[];
+    return articlesData as ArticlePreview[];
   };
 
   public static loadAuthors = async (): Promise<Author[]> => {
-    const filePath = path.join(dataDir, 'authors.json');
-    const raw = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(raw) as Author[];
+    return authorsData as Author[];
   };
 
   public static loadArticleMarkdown = async (slug: string): Promise<string> => {
-    const filePath = path.join(dataDir, 'articles', `${slug}.mdx`);
-    return fs.readFileSync(filePath, 'utf-8');
+    const content = articleContent[slug];
+    if (!content) {
+      throw new Error(`Article markdown not found for slug: ${slug}`);
+    }
+    return content;
   };
 
   public static loadAuthor = async (slug: string): Promise<Author> => {

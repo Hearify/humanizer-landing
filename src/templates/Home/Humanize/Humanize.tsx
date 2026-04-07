@@ -104,26 +104,16 @@ const Humanize: React.FC = () => {
 
   const humanizeText = async () => {
     setHumanizedText('');
-    setMessage('Please wait, we’re working our magic!');
+    setMessage("Please wait, we're working our magic!");
     setStatusCode(0);
     setIsLoading(true);
 
-    const data = {
-      text: userText,
-      language: 'en',
-    };
-
     try {
       const response = await axios.post<HumanizedTextResponse>(
-        'https://apihumanizer.crabdance.com/api/generate/humanize-text',
-        data,
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        },
+        '/api/humanize',
+        { text: userText, purpose: purposeValue, tone: toneValue },
+        { headers: { 'Content-Type': 'application/json' } },
       );
-      console.log('Humanized Text:', response);
       setHumanizedText(response.data.result);
       setStatusCode(response.status);
       if (response.status === 200) {
@@ -131,6 +121,8 @@ const Humanize: React.FC = () => {
       }
     } catch (error) {
       console.error('Error humanizing text:', error);
+      setMessage('Something went wrong. Please try again.');
+      setStatusCode(500);
     } finally {
       setIsLoading(false);
     }
@@ -150,7 +142,7 @@ const Humanize: React.FC = () => {
               effortlessly.
             </p>
             <p>
-              Boost your content’s appeal and ensure it connects with your audience on a human level — all while saving
+              Boost your content's appeal and ensure it connects with your audience on a human level — all while saving
               time and improving your workflow. Abify is your humanizer that makes your writing undetectable and truly
               effective.
             </p>
@@ -180,7 +172,7 @@ const Humanize: React.FC = () => {
             </div>
             <textarea
               className={styles.textarea}
-              placeholder="To rewrite your content, type or paste it here or click on the “Humanize” button below."
+              placeholder={'To rewrite your content, type or paste it here or click on the "Humanize" button below.'}
               onChange={handleChange}
               value={userText}
             />

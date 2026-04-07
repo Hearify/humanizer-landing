@@ -1,5 +1,5 @@
 import React from 'react';
-// import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import ArrowImage from '../../assets/images/arrow.svg';
 import ArticleCards from '@/templates/Blog/ArticleCards/ArticleCards';
@@ -66,9 +66,9 @@ const Blog: React.FC<BlogProps> = ({
 
         <div className={styles['demo-container']}>
           <p>Let Abify help you write human AI content that resonates and drives results.</p>
-          <button className={styles['humanize-btn']} type="button">
+          <Link href="/#humanize_section" className={styles['humanize-btn']}>
             TRY A LIVE DEMO
-          </button>
+          </Link>
         </div>
       </div>
     </div>
